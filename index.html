@@ -7,54 +7,55 @@
   <body>
 
 		<header class="main-header">
-			<nav class="main-navigation">
-				<a ><img src="img/Logo.png" width="154" height="64" alt="Логотип магазина мороженого «Глейси»">
+			<nav class="main-header__main-navigation">
+				<a ><img src="img/logo.png" width="154" height="64" alt="Логотип магазина мороженого «Глейси»">
 				</a>
-				<ul class="site-navigation">
+				<ul class="main-header__site-navigation">
 					<li><a href="catalog.html">Каталог</a></li>
 					<li><a href="payment.html"> Доставка и оплата</a></li>
 					<li><a href="info.html">О Компании</a></li>
-					</ul>
-				<form action="" class="search"><input type="submit" value=" "></form>
-				<ul class="user-navigation">
-					<li class="login-link">Вход</li>
 				</ul>
-				<a href="" class="cart-link"><span>Пусто</span></a>
-				<div class="phone-box">
-					<p class="work-time">С 10 до 20, ежедневно</p>
-					<p class="phone">8 812 450-25-25</p>
+				<form action="" class="main-header__search"><input type="submit" value=" "></form>
+				<ul class="main-header__user-navigation">
+					<li class="main-header__login-link"><a>Вход</a></li>
+				</ul>
+				<a href="" class="main-header__cart-link"><span>Пусто</span></a>
+				<div class="main-header__phone-box">
+					<p class="main-header__work-time">С 10 до 20, ежедневно</p>
+					<p class="main-header__phone">8 812 450-25-25</p>
 				</div>
 			</nav>
 		</header>
 
     <main class="container">
     	<h1 class="visually-hidden">Магазин мороженого «Глейси»</h1>
+
     	<section class="slider">
-    		<h2 class="slider-title">Крем-брюле и пломбир с малиновым джемом</h2>
-    		<div class="slider-nav">
+    		<h2 class="slider__title">Крем-брюле и пломбир с малиновым джемом</h2>
+    		<div class="slider__nav">
     			<input type="radio" id="btn-1" name="toggle" checked>
         	<input type="radio" id="btn-2" name="toggle">
         	<input type="radio" id="btn-3" name="toggle">
-        <div class="slider-controls">
+        <div class="slider__controls">
         	<label for="btn-1"></label>
         	<label for="btn-2"></label>
         	<label for="btn-3"></label>
     		</div>
-    		<a href="#" class="btn">Давайте оба!</a>
+    		<a href="#" class="slider__btn btn">Давайте оба!</a>
     	</section>
 
 			<section class="banners">
-				<h2>Бонусы</h2>
+				<h2 class="visually-hidden">Бонусы</h2>
 				<ul class="banners__list">
 					<li class="banners__item">
 						<h3>Малинка даром!</h3>
 						<p>При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
-						<a href="#" class="btn">Хочу варенье!</a>
+						<a href="#" class="banners__btn btn">Хочу варенье!</a>
 					</li>
 					<li class="banners__item">
 						<h3>Шоколадки даром!</h3>
 						<p>При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
-						<a href="#" class="btn">Хочу шоколадки!</a>
+						<a href="#" class="banners__btn btn">Хочу шоколадки!</a>
 					</li>
 				</ul>
 			</section>
@@ -62,7 +63,7 @@
 			<section class="hits">
 				<h2 class="visually-hidden">Популярные товары</h2>
 				<div class="hits__item">
-					<img src="img/" width="" height="" alt="Фото мороженого">
+					<img src="#" width="" height="" alt="Фото мороженого">
 						<span>310</span>
 						<span>/кг</span>
 						<p>Сливочное с апельсиновым джемом и цитрусовой стружкой </p>
@@ -90,17 +91,17 @@
 			<section class="features">
 				<h2 class="visually-hidden">Наши преимущества</h2>
 				<b>Магазин Глэйси — это онлайн- и офлайн-магазин по продаже мороженого собственного производства на развес</b>
-				<ul class="feature__list">
-					<li class="feature-item">
+				<ul class="features__list">
+					<li class="features__item">
 						<p>Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</p>
 					</li>
-					<li class="feature-item">
+					<li class="features__item">
 						<p>Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.</p>
 					</li>
-					<li class="feature-item">
+					<li class="features__item">
 						<p>Закупка ингредиентов  производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.</p>
 					</li>
-					<li class="feature-item">
+					<li class="features__item">
 						<p>Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.</p>
 					</li>
 				</ul>
@@ -112,9 +113,9 @@
 			</article>
 
 			<section class="newsletter">
-				<p></p>
+				<p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
 				<form action="">
-					<input type="text">
+					<input type="text" placeholder="Электронная почта">
 					<input type="submit" value="Отправить">
 				</form>
 			</section>
@@ -124,9 +125,8 @@
 					<p>Адрес главного офиса<br>  и офлайн-магазина: </p>
 					<p>ул. Большая Конюшенная<br> 19/8, Санкт-Петербург</p>
 					<p>Для заказов по телефону:</p>
-					<p>8 812 450-25-25</p>
-					<p> (с 10 до 20 ежедневно) </p>
-					<a href="#" class="btn">Форма обратной связи</a>
+					<p><b>8 812 450-25-25</b><br>(с 10 до 20 ежедневно)</p>
+					<a href="#" class="map__btn btn">Форма обратной связи</a>
 				</div>
 			</section>
     </main>
@@ -140,16 +140,16 @@
 					<li><a href="#" class="social-btn">Вконтакте</a></li>
 				</ul>
 			</div>
-			<div class="footer-menu">
+			<div class="main-footer__menu">
 				<ul>
-					<li><a href="#">Для поставщиков</a></li>
+					<li><a href="#"><b>Для поставщиков</b></a></li>
 					<li><a href="#">О производстве</a></li>
 					<li><a href="#">Наши документы</a></li>
 					<li><a href="#">Экологические стандарты</a></li>
 				</ul>
 			</div>
 			<div class="main-footer__copyright">
-				<img src="" alt="" class="main-footer__logo-htmlacademy">
+				<img src="" width="" height="" alt="" class="main-footer__logo-htmlacademy">
 				<p>Сделано в <a href="https://htmlacademy.ru/">HTML Academy </a>© 2017</p>
 			</div>
 		</footer>
