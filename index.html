@@ -15,7 +15,7 @@
 					<li><a href="payment.html"> Доставка и оплата</a></li>
 					<li><a href="info.html">О Компании</a></li>
 				</ul>
-				<form action="" class="main-header__search"><input type="submit" value=" "></form>
+				<!--<form action="" class="main-header__search"><input type="submit" value=" "></form>-->
 				<ul class="main-header__user-navigation">
 					<li class="main-header__login-link"><a>Вход</a></li>
 				</ul>
@@ -36,12 +36,17 @@
     			<input type="radio" id="btn-1" name="toggle" checked>
         	<input type="radio" id="btn-2" name="toggle">
         	<input type="radio" id="btn-3" name="toggle">
-        <div class="slider__controls">
-        	<label for="btn-1"></label>
-        	<label for="btn-2"></label>
-        	<label for="btn-3"></label>
-    		</div>
-    		<a href="#" class="slider__btn btn">Давайте оба!</a>
+        	<div class="slider__controls">
+        		<label for="btn-1"></label>
+        		<label for="btn-2"></label>
+        		<label for="btn-3"></label>
+    			</div>
+    			<div class="slider__inner">
+     			<!--Содержимое слайдера-->
+        	</div>
+        </div>
+    		<a href="#" class="slider__btn btn">Давайте оба!
+    		</a>
     	</section>
 
 			<section class="banners">
@@ -65,7 +70,7 @@
 				<ul class="catalog__list">
 					<li class="catalog__item">
 						<a href="#">
-							<img src="#" width="" height="" alt="Фото мороженого">
+							<img src="#" width="200" height="200" alt="Фото мороженого">
 							<span>310</span>
 							<span>/кг</span>
 							<p>Сливочное с апельсиновым джемом и цитрусовой стружкой </p>
@@ -73,7 +78,7 @@
 					</li>
 					<li class="catalog__item">
 						<a href="#">
-							<img src="img/" width="" height="" alt="Фото мороженого">
+							<img src="img/" width="200" height="200" alt="Фото мороженого">
 							<span>380</span>
 							<span>/кг</span>
 							<p>Сливочно-кофейное с кусочками шоколада</p>
@@ -81,7 +86,7 @@
 					</li>
 					<li class="catalog__item">
 						<a href="#">
-							<img src="img/" width="" height="" alt="Фото мороженого">
+							<img src="img/" width="200" height="200" alt="Фото мороженого">
 							<span>355</span>
 							<span>/кг</span>
 							<p>Сливочно-клубничное с присыпкой из белого шоколада</p>
@@ -89,7 +94,7 @@
 					</li>
 					<li class="catalog__item">
 						<a href="#">
-							<img src="img/" width="" height="" alt="Фото мороженого">
+							<img src="img/" width="200" height="200" alt="Фото мороженого">
 							<span>415</span>
 							<span>/кг</span>
 							<p>Сливочное крем-брюле с карамельной подливкой</p>
@@ -124,10 +129,10 @@
 
 			<section class="newsletter">
 				<p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
-				<form action="">
+				<!--<form action="">
 					<input type="text" placeholder="Электронная почта">
 					<input type="submit" value="Отправить">
-				</form>
+				</form>-->
 			</section>
 
 			<section class="map">
@@ -139,6 +144,18 @@
 					<a href="#" class="map__btn btn">Форма обратной связи</a>
 				</div>
 			</section>
+
+			<section class="feedback">
+				<h2>Мы обязательно вам ответим!</h2>
+				<!-- Форма обратной связи-->
+				<!--<form action="">
+					<input type="text" name="user-name-field" id="user-name" placeholder="Как вас зовут?">
+					<input type="text" name="email-field" id="email" placeholder="Ваша почта для ответа?">
+					<input type="text" name="feedback-text" id="letter-field" placeholder="Напишите что-нибудь...">
+					<input type="submit" name="subscribe" value="Отправить">
+				</form>-->
+			</section>
+
     </main>
 
 		<footer class="main-footer">
@@ -159,7 +176,7 @@
 				</ul>
 			</div>
 			<div class="main-footer__copyright">
-				<img src="" width="" height="" alt="Логотип htmlacademy" class="main-footer__logo-htmlacademy">
+				<img src="#" width="108" height="39" alt="Логотип htmlacademy" class="main-footer__logo-htmlacademy">
 				<p>Сделано в <a href="https://htmlacademy.ru/">HTML Academy </a>© 2018</p>
 			</div>
 		</footer>
