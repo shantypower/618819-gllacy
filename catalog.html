@@ -24,10 +24,50 @@
         <li class="header-item"><a href="info.html" class="header__link">О Компании</a></li>
       </ul>
       <ul class="header__user-list">
-        <li class="header__user-item"><!--<form action="" class="main-header__search"><input type="submit" value=" "></form>--></li>
-        <li class="header__user-item"><a class="header__user-link">Вход</a></li>
+        <li class="header__user-item"><a href="#">Поиск</a></li>
+        <li class="header__user-item"><a href="#" class="header__user-link">Вход</a></li>
         <li class="header__user-item"><a href="#" class="header__user-link">Пусто</a></li>
       </ul>
+
+      <div class="cart">
+        <table>
+            <tr class="row">
+              <td class="cell"><button>&times;</button></td>
+              <td class="cell"><img src="#" alt="Фото товара"></td>
+              <td class="cell">Пломбир с апельсиновым джемом</td>
+              <td class="cell">1,5 кг х</td>
+              <td class="cell--grey">200 руб.</td>
+              <td class="cell">300 руб.</td>
+            </tr>
+            <tr class="row">
+              <td class="cell"><button>&times;</button></td>
+              <td class="cell"><img src="#" alt="Фото товара"></td>
+              <td class="cell">Клубничный пломбир с присыпкой  из белого шоколада</td>
+              <td class="cell">1,5 кг х</td>
+              <td class="cell--grey">300 руб.</td>
+              <td class="cell">450 руб.</td>
+            </tr>
+            <tr>
+              <td colspan="6">Итого: 750 руб.</td>
+            </tr>
+            <tr>
+              <td colspan="6"><button>Оформить заказ</button></td>
+            </tr>
+        </table>
+      </div>
+
+      <div class="header__search"><input type="text" placeholder="Что ищем?"></div>
+      <div class="signin">
+        <form action="">
+          <input type="text" placeholder="Электронная почта">
+          <input type="text" placeholder="Пароль">
+          <button>Войти</button>
+            <ul class="signin__list">
+              <li class="signin__item"><a href="" class="signin__link">Забыли пароль?</a></li>
+              <li class="signin__item"><a href="" class="signin__link">Новая регистрация</a></li>
+            </ul>
+        </form>
+      </div>
       
       <div class="header__phone">
         <p class="header__text">С 10 до 20, ежедневно<span class="text--big">8 812 450-25-25</span></p>
@@ -44,11 +84,9 @@
         <li class="breadcrumbs--current">Сливочное</li>
       </ul>
       <h2>Сливочное мороженое</h2>
-      <section class="filters">
-        <h2 class="visually-hidden">Фильтр товаров</h2>
-        <!-- Здесь будет форма -->
-      </section>
-      
+      <!--Фильтры-->
+      <div class="top-filter"></div>
+      <div class="bottom-filter"></div>
 
       <section class="catalog">
         <h2 class="visually-hidden">Каталог товаров</h2>
@@ -127,9 +165,15 @@
           </li>
         </ul>
       </section>
-      <section class="paginator">
-        <!--Здесь будет пагинатор-->
-      </section>
+      <div class="paginator">
+        <a href="#" class="paginator__link">Назад</a>
+        <a href="#" class="paginator__link">1</a>
+        <a href="#" class="paginator__link">2</a>
+        <a href="#" class="paginator__link">3</a>
+        <a href="#" class="paginator__link">4</a>
+        <a href="#" class="paginator__link">5</a>
+        <a href="#" class="paginator__link">Вперед</a>
+      </div>
     </main>
 
     <footer class="footer">
