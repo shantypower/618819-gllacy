@@ -9,17 +9,26 @@
 <body>
 
   <header class="header">
-    <a><img src="img/logo.png" width="154" height="64" alt="Логотип магазина мороженого «Глейси»"></a>
+    <div class="logo"><a class="logo__link"><img src="img/logo.png" width="154" height="64" alt="Логотип магазина мороженого «Глейси»"></a></div>
     <nav class="header__nav">
       <ul class="header__list">
-        <li class="header-item"><a href="catalog.html" class="header__link">Каталог</a></li>
+        <li class="header__item">
+          <a href="catalog.html" class="header__link">Каталог</a>
+          <ul class="catalog__list ">
+            <li class="catalog__item catalog__title">Новинки</li>
+            <li class="catalog__item"><a href="catalog.html" class="catalog__link">Сливочное</a></li>
+            <li class="catalog__item"><a href="#" class="catalog__link">Щербеты</a></li>
+            <li class="catalog__item"><a href="#" class="catalog__link">Фруктовый лед</a></li>
+            <li class="catalog__item"><a href="#" class="catalog__link">Мелорин</a></li>
+          </ul>
+        </li>
         <li class="header-item"><a href="payment.html" class="header__link"> Доставка и оплата</a></li>
         <li class="header-item"><a href="info.html" class="header__link">О Компании</a></li>
       </ul>
-      <ul class="header__userside-list">
-        <li class="header__userside-item"><!--<form action="" class="main-header__search"><input type="submit" value=" "></form>--></li>
-        <li class="header__userside-item"><a class="header__userside-link">Вход</a></li>
-        <li class="header__userside-item"><a href="#" class="header__userside-link">Пусто</a></li>
+      <ul class="header__user-list">
+        <li class="header__user-item"><!--<form action="" class="main-header__search"><input type="submit" value=" "></form>--></li>
+        <li class="header__user-item"><a class="header__user-link">Вход</a></li>
+        <li class="header__user-item"><a href="#" class="header__user-link">Пусто</a></li>
       </ul>
       
       <div class="header__phone">
