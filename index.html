@@ -26,8 +26,24 @@
         <li class="header-item"><a href="info.html" class="header__link">О Компании</a></li>
       </ul>
       <ul class="header__user-list">
-        <li class="header__user-item"><a href="#">Поиск</a></li>
-        <li class="header__user-item"><a href="#" class="header__user-link">Вход</a></li>
+        <li class="header__user-item">
+          <a href="#">Поиск</a>
+          <div class="header__search"><input type="text" placeholder="Что ищем?"></div>
+        </li>
+        <li class="header__user-item">
+          <a href="#" class="header__user-link">Вход</a>
+          <div class="signin">
+            <form action="">
+              <input type="text" placeholder="Электронная почта">
+              <input type="text" placeholder="Пароль">
+              <a href="#">Войти</a>
+              <ul class="signin__list">
+                <li class="signin__item"><a href="" class="signin__link">Забыли пароль?</a></li>
+                <li class="signin__item"><a href="" class="signin__link">Новая регистрация</a></li>
+              </ul>
+            </form>
+          </div>
+        </li>
         <li class="header__user-item"><a href="#" class="header__user-link">Пусто</a></li>
       </ul>
       <div class="header__search"><input type="text" placeholder="Что ищем?"></div>
