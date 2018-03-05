@@ -50,10 +50,9 @@
   </header>
 
   <main class="container">
-    <h1 class="text-hidden">Магазин мороженого «Глейси»</h1>
+    <h1 class="visually-hidden">Магазин мороженого «Глейси»</h1>
 
     <section class="slider">
-      <h2 class="slider__title">Крем-брюле и пломбир с малиновым джемом</h2>
       <div class="slider__nav">
         <input type="radio" id="btn-1" name="toggle" checked class="slider__btn">
         <input type="radio" id="btn-2" name="toggle" class="slider__btn">
@@ -63,15 +62,21 @@
           <label for="btn-2"></label>
           <label for="btn-3"></label>
         </div>
-        <div class="slider__inner"></div>
-        <div class="slider__inner"></div>
-        <div class="slider__inner"></div>
+        <div class="slider__inner">
+          <h2 class="slider__title">Крем-брюле и пломбир с малиновым джемом</h2>
+        </div>
+        <div class="slider__inner">
+          <h2 class="slider__title">Шоколадный пломбир и лимонный сорбет</h2>
+        </div>
+        <div class="slider__inner">
+          <h2 class="slider__title">Пломбир с помадкой и клубничный щербет</h2>
+        </div>
       </div>
       <a href="#" class="slider__btn btn">Давайте оба!</a>
     </section>
 
     <section class="offers">
-      <h2 class="text-hidden">Бонусы</h2>
+      <h2 class="visually-hidden">Бонусы</h2>
       <ul class="offers__list">
         <li class="offers__item">
           <h3>Малинка даром!</h3>
@@ -87,28 +92,28 @@
     </section>
 
     <section class="catalog">
-      <h2 class="text-hidden">Популярные товары</h2>
+      <h2 class="visually-hidden">Популярные товары</h2>
       <ul class="catalog__list">
         <li class="catalog__item">
-          <div class="catalog__image"><img src="#" width="100%" height="100%" alt="Фото мороженого"></div>
+          <div class="catalog__image"><img src="#" width="267" height="267" alt="Фото мороженого"></div>
           <span class="catalog__price"><span class="price--big">310</span>/кг</span>
           <p class="catalog__description">Сливочное с апельсиновым джемом и цитрусовой стружкой</p>
           <a href="#" class="catalog__btn btn">Быстрый просмотр</a>
         </li>
         <li class="catalog__item">
-          <div class="catalog__image"><img src="#" width="100%" height="100%" alt="Фото мороженого"></div>
+          <div class="catalog__image"><img src="#" width="267" height="267" alt="Фото мороженого"></div>
           <span class="catalog__price"><span class="price--big">380</span>/кг</span>
           <p class="catalog__description">Сливочно-кофейное с кусочками шоколада</p>
           <a href="#" class="catalog__btn btn">Быстрый просмотр</a>
         </li>
         <li class="catalog__item">
-          <div class="catalog__image"><img src="#" width="100%" height="100%" alt="Фото мороженого"></div>
+          <div class="catalog__image"><img src="#" width="267" height="267" alt="Фото мороженого"></div>
           <span class="catalog__price"><span class="price--big">355</span>/кг</span>
           <p class="catalog__description">Сливочно-клубничное с присыпкой из белого шоколада</p>
           <a href="#" class="catalog__btn btn">Быстрый просмотр</a>
         </li>
         <li class="catalog__item">
-          <div class="catalog__image"><img src="#" width="100%" height="100%" alt="Фото мороженого"></div>
+          <div class="catalog__image"><img src="#" width="267" height="267" alt="Фото мороженого"></div>
           <span class="catalog__price"><span class="price--big">415</span>/кг</span>
           <p class="catalog__description">Сливочное крем-брюле с карамельной подливкой</p>
           <a href="#" class="catalog__btn btn">Быстрый просмотр</a>
@@ -117,7 +122,7 @@
     </section>
 
     <section class="features">
-      <h2 class="text-hidden">Наши преимущества</h2>
+      <h2 class="visually-hidden">Наши преимущества</h2>
       <b>Магазин Глэйси — это онлайн- и офлайн-магазин по продаже мороженого собственного производства на развес</b>
       <ul class="features__list">
         <li class="features__item">
@@ -136,10 +141,10 @@
     </section>
 
     <section class="newsletter">
-      <h2 class="text-hidden">Новости блога и ваши предложения</h2>
+      <h2 class="visually-hidden">Новости блога и ваши предложения</h2>
       <ul class="newsletter__list">
         <li class="newsletter__item">
-          <h2 class="newsletter__title">Новое в нашем блоге</h2>
+          <h3 class="newsletter__title">Новое в нашем блоге</h3>
           <a href="#" class="newsletter__link">10 способов сервировки фруктовых щербетов к столу</a>
         </li>
         <li class="newsletter__item">
@@ -153,7 +158,7 @@
     </section>
 
     <section class="map">
-      <h2 class="text-hidden">Расположение на карте и адрес</h2>
+      <h2 class="visually-hidden">Расположение на карте и адрес</h2>
       <div class="map__box">
         <p class="map__text">Адрес главного офиса и офлайн-магазина: </p>
         <p class="map__text">ул. Большая Конюшенная 19/8, Санкт-Петербург</p>
