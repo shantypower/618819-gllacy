@@ -2,3 +2,18 @@ body {
   background-color:#8da497;
 }
 
+.header__item .catalog__list,
+.header__user-item .header__search,
+.header__user-item .signin,
+.header__user-item .cart,
+.catalog__item .catalog__btn {
+  display: none;
+}
+
+.header__item:hover .catalog__list,
+.header__user-item:hover .header__search,
+.header__user-item:hover .signin,
+.header__user-item:hover .cart,
+.catalog__item:hover .catalog__btn {
+  display: block;
+}
