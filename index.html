@@ -29,15 +29,21 @@
       <ul class="header__user-list">
         <li class="header__user-item">
           <a href="#">Поиск</a>
-          <div class="header__search"><input type="text" placeholder="Что ищем?"></div>
+          <div class="header__search">
+            <label class="visually-hidden">Поле поиска<input type="text" placeholder="Что ищем?"></label>
+          </div>
         </li>
         <li class="header__user-item">
-          <a href="#" class="header__user-link">Вход</a>
+          <a href="login.html" class="header__user-link">Вход</a>
           <div class="signin">
-            <form action="">
-              <input type="text" placeholder="Электронная почта">
-              <input type="text" placeholder="Пароль">
-              <a href="#" class="signin__btn btn">Войти</a>
+            <form class="signin__form" action="https://htmlacademy.ru" method="post">
+              <p>
+                <label class="visually-hidden">Электронная почта<input class="signin__email" type="email" placeholder="Электронная почта"></label>
+              </p>
+              <p>
+                <label class="visually-hidden">Пароль<input class="signin__password" type="password" placeholder="Пароль" autocomplete="off"></label>
+              </p>
+              <button class="signin__btn btn" type="submit">Войти</button>
               <ul class="signin__list">
                 <li class="signin__item"><a href="" class="signin__link">Забыли пароль?</a></li>
                 <li class="signin__item"><a href="" class="signin__link">Новая регистрация</a></li>
@@ -165,7 +171,7 @@
 
     <section class="map">
       <h2 class="visually-hidden">Расположение на карте и адрес</h2>
-      <div class="map__bg"><img src="img/map.jpg" width="1200" height="430" alt=""></div>
+      <div class="map__bg"><img src="img/map.jpg" width="1200" height="430" alt="Адрес главного офиса и офлайн-магазина: ул. Большая Конюшенная 19/8, Санкт-Петербург"></div>
       <div class="map__box">
         <p class="map__text">Адрес главного офиса и офлайн-магазина: </p>
         <p class="map__text">ул. Большая Конюшенная 19/8, Санкт-Петербург</p>
@@ -178,12 +184,13 @@
     <section class="feedback">
       <h2 class="feedback__title">Мы обязательно вам ответим!</h2>
       <!-- Форма обратной связи-->
-      <!--<form action="">
+      <form action="https://echo.htmlacademy.ru" method="post">
             <input type="text" name="user-name-field" id="user-name" placeholder="Как вас зовут?">
-            <input type="text" name="email-field" id="email" placeholder="Ваша почта для ответа?">
+            <input type="email" name="email-field" id="email" placeholder="Ваша почта для ответа?">
             <textarea type="text" name="feedback-text" id="letter-field" placeholder="Напишите что-нибудь  ."></textarea>
             <input type="submit" name="subscribe" value="Отправить">
-            </form>-->
+      </form>
+      <button class="feedback--close" type="button">Закрыть</button>
     </section>
 
   </main>

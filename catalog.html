@@ -27,14 +27,17 @@
         <ul class="header__user-list">
           <li class="header__user-item">
             <a href="#">Поиск</a>
-            <div class="header__search"><input type="text" placeholder="Что ищем?"></div>
+            <div class="header__search">
+              <form action="/search" method="post"><input type="search" name="search"
+              placeholder="Что ищем?"></form>
+            </div>
           </li>
           <li class="header__user-item">
-            <a href="#" class="header__user-link">Вход</a>
+            <a href="login.html" class="header__user-link">Вход</a>
             <div class="signin">
-              <form action="">
+              <form action="https://echo.htmlacademy.ru" method="post">
                 <input type="text" placeholder="Электронная почта">
-                <input type="text" placeholder="Пароль">
+                <input type="password" placeholder="Пароль" autocomplete="off">
                 <a href="#" class="signin__btn btn">Войти</a>
                 <ul class="signin__list">
                   <li class="signin__item"><a href="" class="signin__link">Забыли пароль?</a></li>
@@ -48,7 +51,7 @@
             <div class="cart">
               <table>
                 <tr class="row">
-                  <td class="cell"><button>&times;</button></td>
+                  <td class="cell"><input type="image" src="img/cross-small.svg" alt="Удалить позицию из корзины"></td>
                   <td class="cell"><img src="img/ice-cream1-small.jpg" width="33" height="33" alt="Фото товара"></td>
                   <td class="cell">Пломбир с апельсиновым джемом</td>
                   <td class="cell">1,5 кг х</td>
@@ -56,7 +59,7 @@
                   <td class="cell">300 руб.</td>
                 </tr>
                 <tr class="row">
-                  <td class="cell"><button>&times;</button></td>
+                  <td class="cell"><input type="image" src="img/cross-small.svg" alt="Удалить позицию из корзины"></td>
                   <td class="cell"><img src="img/ice-cream-2-small.jpg" width="33" height="33" alt="Фото товара"></td>
                   <td class="cell">Клубничный пломбир с присыпкой  из белого шоколада</td>
                   <td class="cell">1,5 кг х</td>
@@ -89,9 +92,45 @@
         <li class="breadcrumbs__item breadcrumbs__item--current">Сливочное</li>
       </ul>
       <h2 class="filter-title">Сливочное мороженое</h2>
-      <!--Фильтры-->
-      <div class="top-filter"></div>
-      <div class="bottom-filter"></div>
+
+      <section class="filters">
+        <h2 class="visually-hidden">Фильтры выбора</h2>
+        <form class="filters__form" action="https://echo.htmlacademy.ru" method="get" oninput="priceoutput.value=pricechoice.value">
+          <div class="filters__top-filter">
+            <h3>Сортировка:</h3>
+            <select id="sort">
+              <option>по популярности</option>
+              <option>сначала недорогие</option>
+              <option>сначала дорогие</option>
+              <option>по жирности</option>
+            </select>
+            <h3>Цена:</h3>
+            <output name="priceoutput">100</output> руб. - 500 руб<input type="range" id="price-field" name="pricechoice" min="50" max="1000" step="10" multiple="2">
+            <h3>Жирность:</h3>
+            <fieldset>
+              <ul>
+                <li><label ><input class="visually-hidden" type="radio" name="" id="" value="">0%</label></li>
+                <li><label ><input class="visually-hidden" type="radio" name="" id="" value="">до 10%</label></li>
+                <li><label ><input class="visually-hidden" type="radio" name="" id="" value="">до 30%</label></li>
+                <li><label ><input class="visually-hidden" type="radio" name="" id="" value="">выше 30%</label></li>
+              </ul>
+            </fieldset>
+          </div>
+          <div class="filters__bottom-filter">
+            <h3>Наполнители:</h3>
+            <fieldset>
+              <ul>
+                <li><label><input class="visually-hidden" type="checkbox" name="" id="">шоколадные</label></li>
+                <li><label><input class="visually-hidden" type="checkbox" name="" id="">сахарные присыпки</label></li>
+                <li><label><input class="visually-hidden" type="checkbox" name="" id="">фрукты</label></li>
+                <li><label><input class="visually-hidden" type="checkbox" name="" id="">сиропы</label></li>
+                <li><label><input class="visually-hidden" type="checkbox" name="" id="">джемы</label></li>
+              </ul>
+            </fieldset>
+            <button class="filters__btn" type="submit">Применить</button>
+          </div>
+        </form>
+      </section>
 
       <section class="catalog">
         <h3 class="visually-hidden">Каталог товаров</h3>
