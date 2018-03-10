@@ -26,26 +26,29 @@
         </ul>
         <ul class="header__user-list">
           <li class="header__user-item">
-            <a href="#">Поиск</a>
-            <div class="header__search">
-              <form action="/search" method="post"><input type="search" name="search"
-              placeholder="Что ищем?"></form>
-            </div>
-          </li>
-          <li class="header__user-item">
-            <a href="login.html" class="header__user-link">Вход</a>
-            <div class="signin">
-              <form action="https://echo.htmlacademy.ru" method="post">
-                <input type="text" placeholder="Электронная почта">
-                <input type="password" placeholder="Пароль" autocomplete="off">
-                <a href="#" class="signin__btn btn">Войти</a>
-                <ul class="signin__list">
-                  <li class="signin__item"><a href="" class="signin__link">Забыли пароль?</a></li>
-                  <li class="signin__item"><a href="" class="signin__link">Новая регистрация</a></li>
-                </ul>
-              </form>
-            </div>
-          </li>
+          <a href="#">Поиск</a>
+          <div class="header__search">
+            <label class="visually-hidden" for="search-field">Поле поиска</label><input type="text" name="search" id="search-field" placeholder="Что ищем?">
+          </div>
+        </li>
+        <li class="header__user-item">
+          <a href="login.html" class="header__user-link">Вход</a>
+          <div class="signin">
+            <form class="signin__form" action="https://echo.htmlacademy.ru" method="post">
+              <p class="signin__field">
+                <label for="email-field" class="visually-hidden">Электронная почта</label><input class="signin__email" type="email" name="email" id="email-field" placeholder="Электронная почта">
+              </p>
+              <p class="signin__field">
+                <label for="password-field" class="visually-hidden">Пароль</label><input class="signin__password" type="password" name="password" id="password-field" placeholder="Пароль" autocomplete="off">
+              </p>
+              <button class="signin__btn btn" type="submit">Войти</button>
+              <ul class="signin__list">
+                <li class="signin__item"><a href="" class="signin__link">Забыли пароль?</a></li>
+                <li class="signin__item"><a href="" class="signin__link">Новая регистрация</a></li>
+              </ul>
+            </form>
+          </div>
+        </li>
           <li class="header__user-item">
             <a href="#" class="header__user-link">2 товара</a>
             <div class="cart">
@@ -87,8 +90,8 @@
       <h1 class="visually-hidden">Каталог товаров</h1>
 
       <ul class="breadcrumbs">
-        <li class="breadcrumbs__item"><a href="index.html">Главная</a></li>
-        <li class="breadcrumbs__item"><a href="catalog.html">Каталог</a></li>
+        <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="index.html">Главная</a></li>
+        <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="catalog.html">Каталог</a></li>
         <li class="breadcrumbs__item breadcrumbs__item--current">Сливочное</li>
       </ul>
       <h2 class="filter-title">Сливочное мороженое</h2>
@@ -97,34 +100,34 @@
         <h2 class="visually-hidden">Фильтры выбора</h2>
         <form class="filters__form" action="https://echo.htmlacademy.ru" method="get" oninput="priceoutput.value=pricechoice.value">
           <div class="filters__top-filter">
-            <h3>Сортировка:</h3>
-            <select id="sort">
+            <h3 class="filters__title">Сортировка:</h3>
+            <select name="sorting">
               <option>по популярности</option>
               <option>сначала недорогие</option>
               <option>сначала дорогие</option>
               <option>по жирности</option>
             </select>
-            <h3>Цена:</h3>
-            <output name="priceoutput">100</output> руб. - 500 руб<input type="range" id="price-field" name="pricechoice" min="50" max="1000" step="10" multiple="2">
-            <h3>Жирность:</h3>
-            <fieldset>
-              <ul>
-                <li><label ><input class="visually-hidden" type="radio" name="" id="" value="">0%</label></li>
-                <li><label ><input class="visually-hidden" type="radio" name="" id="" value="">до 10%</label></li>
-                <li><label ><input class="visually-hidden" type="radio" name="" id="" value="">до 30%</label></li>
-                <li><label ><input class="visually-hidden" type="radio" name="" id="" value="">выше 30%</label></li>
+            <h3 class="filters__title">Цена: <output name="priceoutput">100</output> руб. - 500 руб.</h3>
+            <label for="price-field" class="visually-hidden">Диапазон цены</label><input type="range" id="price-field" name="pricechoice" min="50" max="1000" step="10" multiple="2">
+            <h3 class="filters-title">Жирность:</h3>
+            <fieldset class="filters__group">
+              <ul class="filters__list">
+                <li class="filters__item"><label for="fatness-1" class="visually-hidden">0%</label><input class="filters__input filters__radio" type="radio" name="fatness" id="fatness-1" value="0">0%</li>
+                <li class="filters__item"><label for="fatness-2" class="visually-hidden">до 10%</label><input class="filters__input filters__radio" type="radio" name="fatness" id="fatness-2" value="less 10">до 10%</li>
+                <li class="filters__item"><label for="fatness-3" class="visually-hidden">до 30%</label><input class="filters__input filters__radio" type="radio" name="fatness" id="fatness-3" value="less 30">до 30%</li>
+                <li class="filters__item"><label for="fatness-4" class="visually-hidden">выше 30%</label><input class="filters__input filters__radio" type="radio" name="fatness" id="fatness-4" value="over 30">выше 30%</li>
               </ul>
             </fieldset>
           </div>
           <div class="filters__bottom-filter">
-            <h3>Наполнители:</h3>
-            <fieldset>
-              <ul>
-                <li><label><input class="visually-hidden" type="checkbox" name="" id="">шоколадные</label></li>
-                <li><label><input class="visually-hidden" type="checkbox" name="" id="">сахарные присыпки</label></li>
-                <li><label><input class="visually-hidden" type="checkbox" name="" id="">фрукты</label></li>
-                <li><label><input class="visually-hidden" type="checkbox" name="" id="">сиропы</label></li>
-                <li><label><input class="visually-hidden" type="checkbox" name="" id="">джемы</label></li>
+            <h3 class="filters__title">Наполнители:</h3>
+            <fieldset class="filters__group">
+              <ul class="filters__list">
+                <li class="filters__item"><label class="visually-hidden" for="">шоколадные</label><input class="filters__input filters__checkbox" type="checkbox" name="chocolate" id="filler-1">шоколадные</li>
+                <li class="filters__item"><label class="visually-hidden" for="">сахарные присыпки</label><input class="filters__input filters__checkbox" type="checkbox" name="sugar" id="filler-2">сахарные присыпки</li>
+                <li class="filters__item"><label class="visually-hidden" for="">фрукты</label><input class="filters__input filters__checkbox" type="checkbox" name="fruits" id="filler-3">фрукты</li>
+                <li class="filters__item"><label class="visually-hidden" for="">сиропы</label><input class="filters__input filters__checkbox" type="checkbox" name="syrup" id="filler-4">сиропы</li>
+                <li class="filters__item"><label class="visually-hidden" for="">джемы</label><input class="filters__input filters__checkbox" type="checkbox" name="jam" id="filler-5">джемы</li>
               </ul>
             </fieldset>
             <button class="filters__btn" type="submit">Применить</button>
@@ -210,8 +213,8 @@
         </ul>
       </section>
       <ul class="paginator">
-        <li class="paginator-item"><a href="#" class="paginator__link">Назад</a></li>
-        <li class="paginator-item"><a href="#" class="paginator__link">1</a></li>
+        <li class="paginator-item paginator-item--inactive">Назад</li>
+        <li class="paginator-item paginator__item--current">1</li>
         <li class="paginator-item"><a href="#" class="paginator__link">2</a></li>
         <li class="paginator-item"><a href="#" class="paginator__link">3</a></li>
         <li class="paginator-item"><a href="#" class="paginator__link">4</a></li>
