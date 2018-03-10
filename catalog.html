@@ -27,19 +27,19 @@
         <ul class="header__user-list">
           <li class="header__user-item">
           <a href="#">Поиск</a>
-          <div class="header__search">
-            <label class="visually-hidden" for="search-field">Поле поиска</label><input type="text" name="search" id="search-field" placeholder="Что ищем?">
-          </div>
+          <form class="search__form" action="https://echo.htmlacademy.ru" method="get">
+            <label class="visually-hidden" for="search-field">Поле поиска</label><input type="search" name="search" id="search-field" placeholder="Что ищем?"><button class="visually-hidden" type="submit">Найти</button>
+          </form>
         </li>
         <li class="header__user-item">
           <a href="login.html" class="header__user-link">Вход</a>
           <div class="signin">
-            <form class="signin__form" action="https://echo.htmlacademy.ru" method="post">
-              <p class="signin__field">
-                <label for="email-field" class="visually-hidden">Электронная почта</label><input class="signin__email" type="email" name="email" id="email-field" placeholder="Электронная почта">
+            <form class="signin__form" action="https://echo.htmlacademy.ru" method="post" autocomplete="off">
+              <p class="signin__area">
+                <label for="email-field" class="visually-hidden">Электронная почта</label><input class="signin__field" type="email" name="email" id="email-field" placeholder="Электронная почта" required>
               </p>
-              <p class="signin__field">
-                <label for="password-field" class="visually-hidden">Пароль</label><input class="signin__password" type="password" name="password" id="password-field" placeholder="Пароль" autocomplete="off">
+              <p class="signin__area">
+                <label for="password-field" class="visually-hidden">Пароль</label><input class="signin__field" type="password" name="password" id="password-field" placeholder="Пароль" required>
               </p>
               <button class="signin__btn btn" type="submit">Войти</button>
               <ul class="signin__list">
@@ -100,17 +100,23 @@
         <h2 class="visually-hidden">Фильтры выбора</h2>
         <form class="filters__form" action="https://echo.htmlacademy.ru" method="get" oninput="priceoutput.value=pricechoice.value">
           <div class="filters__top-filter">
-            <h3 class="filters__title">Сортировка:</h3>
-            <select name="sorting">
-              <option>по популярности</option>
+            <fieldset class="filters__group">
+              <h3 class="filters__title">Сортировка:</h3>
+              <select name="sorting">
+              <option selected>по популярности</option>
               <option>сначала недорогие</option>
               <option>сначала дорогие</option>
               <option>по жирности</option>
-            </select>
-            <h3 class="filters__title">Цена: <output name="priceoutput">100</output> руб. - 500 руб.</h3>
-            <label for="price-field" class="visually-hidden">Диапазон цены</label><input type="range" id="price-field" name="pricechoice" min="50" max="1000" step="10" multiple="2">
-            <h3 class="filters-title">Жирность:</h3>
+              </select>
+            </fieldset>
             <fieldset class="filters__group">
+              <h3>Цена: <span id="amountPrice" class="info">100 руб. - 500 руб.</span></h3>
+              <div class="range">Диапазон цены</div>
+              <!--<h3 class="filters__title">Цена: <output name="priceoutput">100</output> руб. - 500 руб.</h3>
+              <label for="price-field" class="visually-hidden">Диапазон цены</label><input type="range" id="price-field" name="pricechoice" min="50" max="1000" step="10" multiple="2">-->
+            </fieldset>
+            <fieldset class="filters__group">
+              <h3 class="filters-title">Жирность:</h3>
               <ul class="filters__list">
                 <li class="filters__item"><label for="fatness-1" class="visually-hidden">0%</label><input class="filters__input filters__radio" type="radio" name="fatness" id="fatness-1" value="0">0%</li>
                 <li class="filters__item"><label for="fatness-2" class="visually-hidden">до 10%</label><input class="filters__input filters__radio" type="radio" name="fatness" id="fatness-2" value="less 10">до 10%</li>
@@ -120,14 +126,14 @@
             </fieldset>
           </div>
           <div class="filters__bottom-filter">
-            <h3 class="filters__title">Наполнители:</h3>
             <fieldset class="filters__group">
+              <h3 class="filters__title">Наполнители:</h3>
               <ul class="filters__list">
-                <li class="filters__item"><label class="visually-hidden" for="">шоколадные</label><input class="filters__input filters__checkbox" type="checkbox" name="chocolate" id="filler-1">шоколадные</li>
-                <li class="filters__item"><label class="visually-hidden" for="">сахарные присыпки</label><input class="filters__input filters__checkbox" type="checkbox" name="sugar" id="filler-2">сахарные присыпки</li>
-                <li class="filters__item"><label class="visually-hidden" for="">фрукты</label><input class="filters__input filters__checkbox" type="checkbox" name="fruits" id="filler-3">фрукты</li>
-                <li class="filters__item"><label class="visually-hidden" for="">сиропы</label><input class="filters__input filters__checkbox" type="checkbox" name="syrup" id="filler-4">сиропы</li>
-                <li class="filters__item"><label class="visually-hidden" for="">джемы</label><input class="filters__input filters__checkbox" type="checkbox" name="jam" id="filler-5">джемы</li>
+                <li class="filters__item"><label class="visually-hidden" for="filler-1">шоколадные</label><input class="filters__input filters__checkbox" type="checkbox" name="chocolate" id="filler-1">шоколадные</li>
+                <li class="filters__item"><label class="visually-hidden" for="filler-2">сахарные присыпки</label><input class="filters__input filters__checkbox" type="checkbox" name="sugar" id="filler-2">сахарные присыпкиfiller-</li>
+                <li class="filters__item"><label class="visually-hidden" for="filler-3">фрукты</label><input class="filters__input filters__checkbox" type="checkbox" name="fruits" id="filler-3">фрукты</li>
+                <li class="filters__item"><label class="visually-hidden" for="filler-4">сиропы</label><input class="filters__input filters__checkbox" type="checkbox" name="syrup" id="filler-4">сиропы</li>
+                <li class="filters__item"><label class="visually-hidden" for="filler-5">джемы</label><input class="filters__input filters__checkbox" type="checkbox" name="jam" id="filler-5">джемы</li>
               </ul>
             </fieldset>
             <button class="filters__btn" type="submit">Применить</button>
@@ -241,6 +247,6 @@
         <p class="footer__text">Сделано в <a href="https://htmlacademy.ru/" class="footer__link">HTML Academy </a>© 2018</p>
       </div>
     </footer>
-    
+
   </body>
 </html>
