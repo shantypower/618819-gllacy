@@ -4,6 +4,8 @@
 <head>
   <meta charset="utf-8">
   <title>Магазин мороженого «Глейси»</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
+  <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -15,12 +17,12 @@
       <ul class="header__list">
         <li class="header__item">
           <a href="catalog.html" class="header__link">Каталог</a>
-          <ul class="catalog__list">
-            <li class="catalog__item catalog__title">Новинки</li>
-            <li class="catalog__item"><a href="catalog.html" class="catalog__link">Сливочное</a></li>
-            <li class="catalog__item"><a href="#" class="catalog__link">Щербеты</a></li>
-            <li class="catalog__item"><a href="#" class="catalog__link">Фруктовый лед</a></li>
-            <li class="catalog__item"><a href="#" class="catalog__link">Мелорин</a></li>
+          <ul class="menu__list">
+            <li class="menu__item menu__title">Новинки</li>
+            <li class="menu__item"><a href="catalog.html" class="menu__link">Сливочное</a></li>
+            <li class="menu__item"><a href="#" class="menu__link">Щербеты</a></li>
+            <li class="menu__item"><a href="#" class="menu__link">Фруктовый лед</a></li>
+            <li class="menu__item"><a href="#" class="menu__link">Мелорин</a></li>
           </ul>
         </li>
         <li class="header-item"><a href="payment.html" class="header__link">Доставка и оплата</a></li>
@@ -28,7 +30,7 @@
       </ul>
       <ul class="header__user-list">
         <li class="header__user-item">
-          <a href="#">Поиск</a>
+          <a href="#" class="header__user-link">Поиск</a>
           <form class="search__form" action="https://echo.htmlacademy.ru" method="get">
             <label class="visually-hidden" for="search-field">Поле поиска</label><input type="search" name="search" id="search-field" placeholder="Что ищем?"><button class="visually-hidden" type="submit">Найти</button>
           </form>
@@ -38,10 +40,10 @@
           <div class="signin">
             <form class="signin__form" action="https://echo.htmlacademy.ru" method="post">
               <p>
-                <label for="email-field" class="visually-hidden">Электронная почта</label><input class="signin__email" type="email" name="email" id="email-field" placeholder="Электронная почта" required>
+                <label for="email-field" class="visually-hidden">Электронная почта (обязательно)</label><input class="signin__email" type="email" name="email" id="email-field" placeholder="Электронная почта" required>
               </p>
               <p>
-                <label for="password-field" class="visually-hidden">Пароль</label><input class="signin__password" type="password" name="password" id="password-field" placeholder="Пароль" autocomplete="off" required>
+                <label for="password-field" class="visually-hidden">Пароль (обязательно)</label><input class="signin__password" type="password" name="password" id="password-field" placeholder="Пароль" autocomplete="off" required>
               </p>
               <button class="signin__btn btn" type="submit">Войти</button>
               <ul class="signin__list">
@@ -92,12 +94,12 @@
       <ul class="offers__list">
         <li class="offers__item">
           <h3 class="offers__title">Малинка даром!</h3>
-          <p>При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
+          <p class="offers__text">При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
           <a href="#" class="offers__btn btn">Хочу варенье!</a>
         </li>
         <li class="offers__item">
           <h3 class="offers__title">Шоколадки даром!</h3>
-          <p>При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
+          <p class="offers__text">При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
           <a href="#" class="offers__btn btn">Хочу шоколадки!</a>
         </li>
       </ul>
@@ -135,7 +137,7 @@
 
     <section class="features">
       <h2 class="visually-hidden">Наши преимущества</h2>
-      <b>Магазин Глэйси — это онлайн- и офлайн-магазин по продаже мороженого собственного производства на развес</b>
+      <b class="features__description">Магазин Глэйси — это онлайн- и офлайн-магазин по продаже мороженого собственного производства на развес</b>
       <ul class="features__list">
         <li class="features__item">
           <p class="features__text">Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</p>
@@ -162,7 +164,7 @@
         <li class="newsletter__item">
           <p class="newsletter__text">Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
           <form class="newsletter__form" action="https://echo.htmlacademy.ru" method="post">
-            <label for="e-mail-field"></label><input type="email" name="e-mail" id="e-mail-field" placeholder="Электронная почта" required>
+            <label for="e-mail-field">Электронная почта</label><input type="email" name="e-mail" id="e-mail-field" placeholder="Электронная почта" required>
             <button class="newsletter_btn btn" type="submit">Отправить</button>
           </form>
         </li>

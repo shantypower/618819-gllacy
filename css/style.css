@@ -1,5 +1,20 @@
 body {
+  margin: 0;
+  padding: 0;
+
+  font-family: 'Roboto', 'Arial', sans-serif;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 700;
+  color: #ffffff;
+
   background-color: #8da497;
+}
+
+a {
+  text-decoration: none;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .visually-hidden {
@@ -12,25 +27,173 @@ body {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
-/*
-.header__item .catalog__list,
-.header__user-item .header__search,
+
+.header__list,
+.menu__list,
+.catalog__list,
+.header__user-list,
+.signin__list,
+.offers__list,
+.catalog__list,
+.features__list,
+.newsletter__list,
+.footer__social-list,
+.footer__menu-list,
+.breadcrumbs,
+.filters__list,
+.paginator {
+  list-style: none;
+}
+.header__link,
+.menu__link,
+.footer__link,
+.header__user-link,
+.breadcrumbs__link,
+.paginator__link {
+  color: #ffffff;
+}
+
+.header__link:hover,
+.header__link:focus,
+.header__link:active {
+  padding: 10px 13px;
+  color: #333333;
+
+  background-color: #f7f6f3;
+}
+
+.menu__list {
+  background-color: #f8f7f4;
+}
+.menu__item {
+  font-weight: 300;
+}
+
+.menu__item,
+.header__user-link,
+.header__text {
+  font-size: 14px;
+  line-height: 16px;
+}
+.menu__item:hover {
+  background-color: #fbded7;
+}
+
+.menu__item:active {
+  background-color: #f6b5a5;
+}
+
+.item--current {
+  background-color: #d07058;
+}
+
+.menu__title {
+  font-weight: 700;
+}
+
+.menu__title,
+.menu__link {
+  color: #323232;
+}
+
+.header__user-link {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.text--big {
+  font-size: 22px;
+  line-height: 24px;
+}
+
+.slider__title {
+  font-size: 60px;
+  line-height: 60.35px;
+}
+
+.slider__btn {
+  font-size: 32px;
+  line-height: 44px;
+}
+.btn {
+  color: #ffffff;
+  background-image: linear-gradient(to bottom, #f16743, #e54a35);
+}
+
+.offers__btn {
+  background-image: linear-gradient(to bottom, #f16743, #e64c37);
+}
+
+.offers__item:first-child {
+  background: url("../img/raspberry-bg.jpg") no-repeat;
+}
+
+.offers__item:last-child {
+  background: url("../img/chocolate-bg.jpg") no-repeat;
+}
+
+.offers__title {
+  font-size: 35px;
+  line-height: 41px;
+}
+
+.offers__text {
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.catalog__price {
+  font-size: 18px;
+}
+
+.price--big {
+  font-size: 35px;
+  line-height: 45px;
+}
+
+.catalog__description {
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 400;
+}
+
+.features {
+  background-color: #eaddc1;
+  background-image: url("../img/vaflya.jpg");
+}
+
+.features__description {
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 400;
+  color: #323232;
+}
+
+.features__text {
+  line-height: 22px;
+  font-weight: 200;
+  color: #323232;
+}
+
+.newsletter__item:first-child {
+  background-image: url("../img/strawberry-bg.jpg");
+}
+
+.newsletter__item:last-child {
+  background-image: url("../img/post-bg.jpg");
+}
+
+.header__item .menu__list,
+.header__user-item .search__form,
 .header__user-item .signin,
 .header__user-item .cart,
 .catalog__item .catalog__btn {
   display: none;
 }
-
- {
-  display: block;
-}
-
-.header__item:hover .catalog__list,
+ 
+.header__item:hover .menu__list,
 .header__user-item:hover .signin,
 .header__user-item:hover .cart,
 .catalog__item:hover .catalog__btn,
-.header__user-item:focus .header__search,
-.header__user-item:active .header__search,
-.header__user-item:hover .header__search {
+.header__user-item:hover .search__form {
   display: block;
-}*/
+}
