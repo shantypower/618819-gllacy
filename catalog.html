@@ -92,11 +92,11 @@
       <h1 class="visually-hidden">Каталог товаров</h1>
 
       <ul class="breadcrumbs">
-        <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="index.html">Главная</a></li>
-        <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="catalog.html">Каталог</a></li>
+        <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="index.html">Главная</a><span>»</span></li>
+        <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="catalog.html">Каталог</a><span>»</span></li>
         <li class="breadcrumbs__item breadcrumbs__item--current" aria-current="page"><span class="visually-hidden">Текущий пункт меню</span>Сливочное</li>
       </ul>
-      <h2 class="filter-title">Сливочное мороженое</h2>
+      <h2 class="filter__title">Сливочное мороженое</h2>
 
       <section class="filters">
         <h2 class="visually-hidden">Фильтры выбора</h2>
@@ -112,13 +112,11 @@
               </select>
             </fieldset>
             <fieldset class="filters__group">
-              <h3>Цена: <span id="amountPrice" class="info">100 руб. - 500 руб.</span></h3>
+              <h3 class="filters__title">Цена: <span id="amountPrice" class="info">100 руб. - 500 руб.</span></h3>
               <div class="range">Диапазон цены</div>
-              <!--<h3 class="filters__title">Цена: <output name="priceoutput">100</output> руб. - 500 руб.</h3>
-              <label for="price-field" class="visually-hidden">Диапазон цены</label><input type="range" id="price-field" name="pricechoice" min="50" max="1000" step="10" multiple="2">-->
             </fieldset>
             <fieldset class="filters__group">
-              <h3 class="filters-title">Жирность:</h3>
+              <h3 class="filters__title">Жирность:</h3>
               <ul class="filters__list">
                 <li class="filters__item"><label for="fatness-1" class="visually-hidden">0%</label><input class="filters__input filters__radio" type="radio" name="fatness" id="fatness-1" value="0">0%</li>
                 <li class="filters__item"><label for="fatness-2" class="visually-hidden">до 10%</label><input class="filters__input filters__radio" type="radio" name="fatness" id="fatness-2" value="less 10">до 10%</li>
@@ -221,13 +219,13 @@
         </ul>
       </section>
       <ul class="paginator">
-        <li class="paginator-item paginator-item--inactive">Назад</li>
+        <li class="paginator-item paginator-item--inactive"><</li>
         <li class="paginator-item paginator__item--current">1</li>
         <li class="paginator-item"><a href="#" class="paginator__link">2</a></li>
         <li class="paginator-item"><a href="#" class="paginator__link">3</a></li>
         <li class="paginator-item"><a href="#" class="paginator__link">4</a></li>
         <li class="paginator-item"><a href="#" class="paginator__link">5</a></li>
-        <li class="paginator-item"><a href="#" class="paginator__link">Вперед</a></li>
+        <li class="paginator-item"><a href="#" class="paginator__link">></a></li>
       </ul>
     </main>
 
