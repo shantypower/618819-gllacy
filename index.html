@@ -32,7 +32,7 @@
         <li class="header__user-item">
           <a href="#" class="header__user-link">Поиск</a>
           <form class="search__form" action="https://echo.htmlacademy.ru" method="get">
-            <label class="visually-hidden" for="search-field">Поле поиска</label><input type="search" name="search" id="search-field" placeholder="Что ищем?"><button class="visually-hidden" type="submit">Найти</button>
+            <label class="visually-hidden" for="search-field">Поле поиска</label><input class="search__input" type="search" name="search" id="search-field" placeholder="Что ищем?"><button class="visually-hidden" type="submit">Найти</button>
           </form>
         </li>
         <li class="header__user-item">
@@ -40,10 +40,10 @@
           <div class="signin">
             <form class="signin__form" action="https://echo.htmlacademy.ru" method="post">
               <p>
-                <label for="email-field" class="visually-hidden">Электронная почта (обязательно)</label><input class="signin__email" type="email" name="email" id="email-field" placeholder="Электронная почта" required>
+                <label for="email-field" class="visually-hidden">Электронная почта (обязательно)</label><input class="signin__input" type="email" name="email" id="email-field" placeholder="Электронная почта" required>
               </p>
               <p>
-                <label for="password-field" class="visually-hidden">Пароль (обязательно)</label><input class="signin__password" type="password" name="password" id="password-field" placeholder="Пароль" autocomplete="off" required>
+                <label for="password-field" class="visually-hidden">Пароль (обязательно)</label><input class="signin__input" type="password" name="password" id="password-field" placeholder="Пароль" autocomplete="off" required>
               </p>
               <button class="signin__btn btn" type="submit">Войти</button>
               <ul class="signin__list">
@@ -162,11 +162,14 @@
           <a href="#" class="newsletter__link">10 способов сервировки фруктовых щербетов к столу</a>
         </li>
         <li class="newsletter__item">
-          <p class="newsletter__text">Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
-          <form class="newsletter__form" action="https://echo.htmlacademy.ru" method="post">
-            <label for="e-mail-field">Электронная почта</label><input type="email" name="e-mail" id="e-mail-field" placeholder="Электронная почта" required>
-            <button class="newsletter_btn btn" type="submit">Отправить</button>
-          </form>
+          <div class="newsletter__bg">
+            <p class="newsletter__text">Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
+            <form class="newsletter__form" action="https://echo.htmlacademy.ru" method="post">
+              <label for="e-mail-field" class="visually-hidden">Электронная почта</label><input class="newsletter__input" type="email" name="e-mail" id="e-mail-field" placeholder="Электронная почта" required>
+              <button class="newsletter_btn btn" type="submit">Отправить</button>
+            </form>
+          </div>
+          
         </li>
       </ul>
     </section>
@@ -176,7 +179,7 @@
       <div class="map__bg"><img src="img/map.jpg" width="1200" height="430" alt="Адрес главного офиса и офлайн-магазина: ул. Большая Конюшенная 19/8, Санкт-Петербург"></div>
       <div class="map__box">
         <p class="map__text">Адрес главного офиса и офлайн-магазина: </p>
-        <p class="map__text">ул. Большая Конюшенная 19/8, Санкт-Петербург</p>
+        <p class="map__text--bold">ул. Большая Конюшенная 19/8, Санкт-Петербург</p>
         <p class="map__text">Для заказов по телефону:</p>
         <p class="map__text"><span class="map__text--bold">8 812 450-25-25</span>(с 10 до 20 ежедневно)</p>
         <a href="#" class="map__btn btn">Форма обратной связи</a>
@@ -190,9 +193,9 @@
             <label class="visually-hidden" for="user-name">Как вас зовут?</label><input class="feedback__field" type="text" name="user-name-field" id="user-name" placeholder="Как вас зовут?" required>
             <label class="visually-hidden" for="email">Ваша почта для ответа?</label><input class="feedback__field" type="email" name="email-field" id="email" placeholder="Ваша почта для ответа?" required>
             <label class="visually-hidden" for="letter-field">Напишите что-нибудь</label><textarea class="feedback__text" type="text" name="feedback-text" id="letter-field" placeholder="Напишите что-нибудь..." required></textarea>
-            <button type="submit" name="subscribe">Отправить</button>
+            <button class="btn" type="submit" name="subscribe">Отправить</button>
       </form>
-      <button class="feedback--close" type="button">Закрыть</button>
+      <button class="feedback--close btn" type="button">Закрыть</button>
     </section>
 
   </main>
@@ -205,7 +208,7 @@
         <li class="footer__social-item"><a href="#" class="social-btn">Вконтакте</a></li>
       </ul>
       <ul class="footer__menu-list">
-        <li class="footer__menu-item"><a href="#" class="footer__link"><span class="text--bold">Для поставщиков</span></a></li>
+        <li class="footer__menu-item"><a href="#" class="footer__link"><span class="footer__text--bold">Для поставщиков</span></a></li>
         <li class="footer__menu-item"><a href="#" class="footer__link">О производстве</a></li>
         <li class="footer__menu-item"><a href="#" class="footer__link">Наши документы</a></li>
         <li class="footer__menu-item"><a href="#" class="footer__link">Экологические стандарты</a></li>

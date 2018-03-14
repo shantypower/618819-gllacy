@@ -28,9 +28,9 @@
         </ul>
         <ul class="header__user-list">
           <li class="header__user-item">
-          <a href="#">Поиск</a>
+          <a href="#" class="header__user-link">Поиск</a>
           <form class="search__form" action="https://echo.htmlacademy.ru" method="get">
-            <label class="visually-hidden" for="search-field">Поле поиска</label><input type="search" name="search" id="search-field" placeholder="Что ищем?"><button class="visually-hidden" type="submit">Найти</button>
+            <label class="visually-hidden" for="search-field">Поле поиска</label><input class="search__input" type="search" name="search" id="search-field" placeholder="Что ищем?"><button class="visually-hidden" type="submit">Найти</button>
           </form>
         </li>
         <li class="header__user-item">
@@ -38,10 +38,10 @@
           <div class="signin">
             <form class="signin__form" action="https://echo.htmlacademy.ru" method="post" autocomplete="off">
               <p class="signin__area">
-                <label for="email-field" class="visually-hidden">Электронная почта (обязательно)</label><input class="signin__field" type="email" name="email" id="email-field" placeholder="Электронная почта" required>
+                <label for="email-field" class="visually-hidden">Электронная почта (обязательно)</label><input class="signin__input" type="email" name="email" id="email-field" placeholder="Электронная почта" required>
               </p>
               <p class="signin__area">
-                <label for="password-field" class="visually-hidden">Пароль (обязательно)</label><input class="signin__field" type="password" name="password" id="password-field" placeholder="Пароль" required>
+                <label for="password-field" class="visually-hidden">Пароль (обязательно)</label><input class="signin__input" type="password" name="password" id="password-field" placeholder="Пароль" required>
               </p>
               <button class="signin__btn btn" type="submit">Войти</button>
               <ul class="signin__list">
