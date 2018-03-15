@@ -14,7 +14,7 @@
       <nav class="header__nav">
         <ul class="header__list">
           <li class="header__item">
-            <a href="catalog.html" class="header__link">Каталог</a>
+            <a href="catalog.html" class="header__link header__link--current">Каталог</a>
             <ul class="menu__list ">
               <li class="menu__item menu__title">Новинки</li>
               <li class="menu__item item--current"><a href="catalog.html" class="menu__link">Сливочное</a></li>
@@ -54,7 +54,7 @@
           <li class="header__user-item">
             <a href="#" class="header__user-link">2 товара</a>
             <div class="cart">
-              <table>
+              <table class="cart__content">
                 <tr class="row">
                   <td class="cell"><input type="image" src="img/cross-small.svg" alt="Удалить позицию из корзины"></td>
                   <td class="cell"><img src="img/ice-cream1-small.jpg" width="33" height="33" alt="Фото товара"></td>
@@ -113,7 +113,7 @@
             </fieldset>
             <fieldset class="filters__group">
               <h3 class="filters__title">Цена: <span id="amountPrice" class="info">100 руб. - 500 руб.</span></h3>
-              <div class="range">Диапазон цены</div>
+              <div class="range">Ползунок</div>
             </fieldset>
             <fieldset class="filters__group">
               <h3 class="filters__title">Жирность:</h3>
@@ -130,7 +130,7 @@
               <h3 class="filters__title">Наполнители:</h3>
               <ul class="filters__list">
                 <li class="filters__item"><label class="visually-hidden" for="filler-1">шоколадные</label><input class="filters__input filters__checkbox" type="checkbox" name="chocolate" id="filler-1">шоколадные</li>
-                <li class="filters__item"><label class="visually-hidden" for="filler-2">сахарные присыпки</label><input class="filters__input filters__checkbox" type="checkbox" name="sugar" id="filler-2">сахарные присыпкиfiller-</li>
+                <li class="filters__item"><label class="visually-hidden" for="filler-2">сахарные присыпки</label><input class="filters__input filters__checkbox" type="checkbox" name="sugar" id="filler-2">сахарные присыпки</li>
                 <li class="filters__item"><label class="visually-hidden" for="filler-3">фрукты</label><input class="filters__input filters__checkbox" type="checkbox" name="fruits" id="filler-3">фрукты</li>
                 <li class="filters__item"><label class="visually-hidden" for="filler-4">сиропы</label><input class="filters__input filters__checkbox" type="checkbox" name="syrup" id="filler-4">сиропы</li>
                 <li class="filters__item"><label class="visually-hidden" for="filler-5">джемы</label><input class="filters__input filters__checkbox" type="checkbox" name="jam" id="filler-5">джемы</li>
@@ -237,7 +237,7 @@
         <li class="footer__social-item"><a href="#" class="social-btn">Вконтакте</a></li>
       </ul>
       <ul class="footer__menu-list">
-        <li class="footer__menu-item"><a href="#" class="footer__link"><span class="text--bold">Для поставщиков</span></a></li>
+        <li class="footer__menu-item"><a href="#" class="footer__link"><span class="footer__text--bold">Для поставщиков</span></a></li>
         <li class="footer__menu-item"><a href="#" class="footer__link">О производстве</a></li>
         <li class="footer__menu-item"><a href="#" class="footer__link">Наши документы</a></li>
         <li class="footer__menu-item"><a href="#" class="footer__link">Экологические стандарты</a></li>
@@ -246,7 +246,7 @@
         <img src="img/logo-htmlacademy.svg" width="108" height="39" alt="Логотип htmlacademy" class="footer__logo">
         <p class="footer__text">Сделано в <a href="https://htmlacademy.ru/" class="footer__link">HTML Academy </a>© 2018</p>
       </div>
-    </footer>
+  </footer>
 
   </body>
 </html>
