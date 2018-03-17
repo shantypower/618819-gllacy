@@ -12,7 +12,7 @@
     <header class="header centering">
       <div class="logo"><a href="index.html" class="logo__link"><img src="img/logo.svg" width="154" height="64" alt="Логотип магазина мороженого «Глейси»"></a>  </div>
       <nav class="header__nav flexparent">
-        <ul class="header__list">
+        <ul class="header__list flexparent">
           <li class="header__item">
             <a href="catalog.html" class="header__link header__link--current">Каталог</a>
             <ul class="menu__list ">
@@ -26,7 +26,7 @@
           <li class="header-item"><a href="payment.html" class="header__link">Доставка и оплата</a></li>
           <li class="header-item"><a href="info.html" class="header__link">О Компании</a></li>
         </ul>
-        <ul class="header__user-list">
+        <ul class="header__user-list flexparent">
           <li class="header__user-item">
           <a href="#" class="header__user-link">Поиск</a>
           <form class="search__form" action="https://echo.htmlacademy.ru" method="get">
@@ -83,12 +83,12 @@
         </ul>
       </nav>
       <div class="header__phone flexparent">
-        <ul class="breadcrumbs">
+        <ul class="breadcrumbs flexparent">
           <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="index.html">Главная</a><span>»</span></li>
           <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="catalog.html">Каталог</a><span>»</span></li>
           <li class="breadcrumbs__item breadcrumbs__item--current" aria-current="page"><span class="visually-hidden">Текущий пункт меню</span>Сливочное</li>
         </ul>
-        <p class="header__text">С 10 до 20, ежедневно<span class="text--big"> 8 812 450-25-25</span></p>
+        <p class="header__text">С 10 до 20, ежедневно<br><span class="text--big">8 812 450-25-25</span></p>
       </div>
     </header>
 
@@ -99,7 +99,7 @@
       <section class="filters">
         <h2 class="visually-hidden">Фильтры выбора</h2>
         <form class="filters__form" action="https://echo.htmlacademy.ru" method="get" oninput="priceoutput.value=pricechoice.value">
-          <div class="filters__top-filter flexparent">
+          <div class="filters__block flexparent">
             <fieldset class="filters__group">
               <h3 class="filters__title">Сортировка:</h3>
               <select class="filters__sorting" name="sorting">
@@ -123,7 +123,7 @@
               </ul>
             </fieldset>
           </div>
-          <div class="filters__bottom-filter flexparent">
+          <div class="filters__block flexparent">
             <fieldset class="filters__group">
               <h3 class="filters__title">Наполнители:</h3>
               <ul class="filters__list flexparent">
@@ -216,7 +216,7 @@
           </li>
         </ul>
       </section>
-      <ul class="paginator">
+      <ul class="paginator flexparent">
         <li class="paginator-item paginator-item--inactive"><</li>
         <li class="paginator-item paginator__item--current">1</li>
         <li class="paginator-item"><a href="#" class="paginator__link">2</a></li>
@@ -228,7 +228,7 @@
     </main>
 
     <footer class="footer flexparent centering">
-      <ul class="footer__social-list">
+      <ul class="footer__social-list flexparent">
         <li class="footer__social-item"><a href="#" class="social-btn">Твиттер</a></li>
         <li class="footer__social-item"><a href="#" class="social-btn">Инстаграм</a></li>
         <li class="footer__social-item"><a href="#" class="social-btn">Фейсбук</a></li>

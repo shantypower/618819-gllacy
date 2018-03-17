@@ -14,7 +14,7 @@
   <header class="header centering">
     <div class="logo"><a class="logo__link"><img src="img/logo.svg" width="154" height="64" alt="Логотип магазина мороженого «Глейси»"></a></div>
     <nav class="header__nav flexparent">
-      <ul class="header__list">
+      <ul class="header__list flexparent">
         <li class="header__item">
           <a href="catalog.html" class="header__link">Каталог</a>
           <ul class="menu__list">
@@ -28,7 +28,7 @@
         <li class="header-item"><a href="payment.html" class="header__link">Доставка и оплата</a></li>
         <li class="header-item"><a href="info.html" class="header__link">О Компании</a></li>
       </ul>
-      <ul class="header__user-list">
+      <ul class="header__user-list flexparent">
         <li class="header__user-item">
           <a href="#" class="header__user-link">Поиск</a>
           <form class="search__form" action="https://echo.htmlacademy.ru" method="get">
@@ -56,27 +56,29 @@
         <li class="header__user-item"><a href="#" class="header__user-link">Пусто</a></li>
       </ul>
     </nav>
-    <div class="header__phone">
-        <p class="header__text">С 10 до 20, ежедневно<span class="text--big"> 8 812 450-25-25</span></p>
+    <div class="header__phone flexparent">
+        <p class="header__text">С 10 до 20, ежедневно<br><span class="text--big">8 812 450-25-25</span></p>
     </div>
   </header>
 
   <main class="container centering">
     <h1 class="visually-hidden">Магазин мороженого «Глейси»</h1>
 
-    <section class="slider flexparent">
-      <div class="slider__nav">
+    <section class="slider">
+      <div class="slider__content">
         <div class="slider__inner">
           <img src="img/slide1.png" width="1045" height="881" alt="Спецпредложение">
         </div>
         <h2 class="slider__title">Крем-брюле и пломбир с малиновым джемом</h2>
-        <div class="slider__inner">
+        <div class="slider__inner inner--hidden">
           <h2 class="slider__title">Шоколадный пломбир и лимонный сорбет</h2>
         </div>
-        <div class="slider__inner">
+        <div class="slider__inner inner--hidden">
           <h2 class="slider__title">Пломбир с помадкой и клубничный щербет</h2>
         </div>
-        <fieldset class="slider__controls">
+      </div>
+      <div class="slider__nav flexparent">
+        <fieldset class="slider__controls flexparent">
           <input type="radio" id="btn-1" name="toggle" checked class="slider__btn">
           <input type="radio" id="btn-2" name="toggle" class="slider__btn">
           <input type="radio" id="btn-3" name="toggle" class="slider__btn">
@@ -86,9 +88,10 @@
             <label for="btn-3" class="visually-hidden">Третий слайд с мороженым</label>
           </div>
         </fieldset>
-        
+        <a href="#" class="slider__btn btn">Давайте оба!</a>
+        <a href="#" class="slider__btn btn btn--hidden">Давайте оба!</a>
+        <a href="#" class="slider__btn btn btn--hidden">Давайте оба!</a>
       </div>
-      <a href="#" class="slider__btn btn">Давайте оба!</a>
     </section>
 
     <section class="offers">
@@ -175,7 +178,6 @@
         </li>
       </ul>
     </section>
-
   </main>
 
   <section class="map">
@@ -188,22 +190,22 @@
         <p class="map__text"><span class="map__text--bold">8 812 450-25-25</span>(с 10 до 20 ежедневно)</p>
         <a href="#" class="map__btn btn">Форма обратной связи</a>
       </div>
-    </section>
+  </section>
 
-    <section class="feedback">
-      <h2 class="feedback__title">Мы обязательно вам ответим!</h2>
+  <section class="feedback">
+    <h2 class="feedback__title">Мы обязательно вам ответим!</h2>
       <!-- Форма обратной связи-->
-      <form class="feedback__form" action="https://echo.htmlacademy.ru" method="post">
-            <label class="visually-hidden" for="user-name">Как вас зовут?</label><input class="feedback__field" type="text" name="user-name-field" id="user-name" placeholder="Как вас зовут?" required>
-            <label class="visually-hidden" for="email">Ваша почта для ответа?</label><input class="feedback__field" type="email" name="email-field" id="email" placeholder="Ваша почта для ответа?" required>
-            <label class="visually-hidden" for="letter-field">Напишите что-нибудь</label><textarea class="feedback__text" type="text" name="feedback-text" id="letter-field" placeholder="Напишите что-нибудь..." required></textarea>
-            <button class="btn" type="submit" name="subscribe">Отправить</button>
-      </form>
-      <button class="feedback--close" type="button"><img src="img/cross-big.svg" alt="Закрыть"></button>
-    </section>
+    <form class="feedback__form" action="https://echo.htmlacademy.ru" method="post">
+      <label class="visually-hidden" for="user-name">Как вас зовут?</label><input class="feedback__field" type="text" name="user-name-field" id="user-name" placeholder="Как вас зовут?" required>
+      <label class="visually-hidden" for="email">Ваша почта для ответа?</label><input class="feedback__field" type="email" name="email-field" id="email" placeholder="Ваша почта для ответа?" required>
+      <label class="visually-hidden" for="letter-field">Напишите что-нибудь</label><textarea class="feedback__text" type="text" name="feedback-text" id="letter-field" placeholder="Напишите что-нибудь..." required></textarea>
+      <button class="btn" type="submit" name="subscribe">Отправить</button>
+    </form>
+    <button class="feedback--close" type="button"><img src="img/cross-big.svg" alt="Закрыть"></button>
+  </section>
 
   <footer class="footer flexparent centering">
-      <ul class="footer__social-list">
+      <ul class="footer__social-list flexparent">
         <li class="footer__social-item"><a href="#" class="social-btn">Твиттер</a></li>
         <li class="footer__social-item"><a href="#" class="social-btn">Инстаграм</a></li>
         <li class="footer__social-item"><a href="#" class="social-btn">Фейсбук</a></li>

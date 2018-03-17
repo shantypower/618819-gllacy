@@ -60,14 +60,12 @@ a {
 
 .footer__link {
   color: #ffffff;
-
   text-decoration: underline;
   text-decoration-color: rgba(255, 255, 255, 0.2);
 }
 
 .footer__link:hover{
   color: #ffbc9e;
-
   text-decoration-color: rgba(255, 188, 158, 0.2);
 }
 
@@ -125,40 +123,57 @@ a {
   font-weight: bold;
 }
 
+.centering {
+  width: 1146px;
+  margin: 0 auto;
+  padding: 0 27px;
+}
+
+.header {
+  margin-top: 23px;
+}
+
 .logo {
   position: absolute;
 }
 
 .header__nav {
-  /*position: absolute;*/
   margin-left: 158px;
   justify-content: space-between;
-  align-items: space-between;
-  flex-wrap: wrap;
 }
 
 .header__list {
   width: 700px;
 }
 
+.header__link {
+  margin-right: 10px;
+
+  text-decoration: underline;
+  text-decoration-color: rgba(255, 255, 255, 0.2);
+}
+
 .header__user-list {
+  justify-content: flex-end;
   width: 267px;
 }
 
 .header__phone {
-  justify-content: space-between;
+  justify-content: flex-end;
 }
 
 .header__text {
   width: 167px;
+
   font-size: 14px;
   line-height: 16px;
   text-align: right;
 }
 
 .breadcrumbs {
-width: 267px;
-margin-right: auto;
+  align-items: flex-end;
+  width: 267px;
+  margin-right: auto;
 }
 
 .menu__list {
@@ -211,6 +226,8 @@ margin-right: auto;
 }
 
 .header__user-link {
+  margin-left: 10px;
+
   background-color: rgba(255, 255, 255, 0.2);
   border-radius: 50px;
 }
@@ -279,46 +296,39 @@ margin-right: auto;
   text-align: right;
 }
 
-.cart__btn {
-  
-}
-
 .text--big {
   font-size: 22px;
   line-height: 24px;
 }
 
 .slider {
-  flex-wrap: wrap;
   justify-content: center;
-}
-
-.slider__inner {
-  
 }
 
 .slider__controls {
   margin: 0;
-  margin-left: 0;
   padding: 0;
-  width: 80px;
+  margin-right: 356px;
+
   border-style: none;
 }
 
 .slider__title {
   width: 670px;
   margin: 0 auto;
+
   font-size: 60px;
   line-height: 60.35px;
   text-align: center;
 }
 
 .slider .slider__btn {
-  margin-right: auto;
+  justify-content: center;
   width: 278px;
+
   font-size: 32px;
   line-height: 44px;
-  align-self: flex-end;
+
 }
 
 .btn {
@@ -381,7 +391,6 @@ margin-right: auto;
 
 .catalog__item {
   width: 267px;
-
 }
 
 .catalog__item:hover {
@@ -414,6 +423,7 @@ margin-right: auto;
 
 .features {
   margin-bottom: 40px;
+
   background: url("../img/vaflya.jpg") repeat center;
   background-color: #eaddc1;
 }
@@ -481,7 +491,6 @@ margin-right: auto;
 }
 
 .map__box {
-  position: relative;
   width:302px;
   height:305px;
 
@@ -533,10 +542,12 @@ margin-right: auto;
   font-size: 14px;
   line-height: 16px;
   font-weight: normal;
-
 }
 
 .filter__title {
+  padding: 0;
+  margin: 0;
+
   font-size: 35px;
   line-height: 41px;
 }
@@ -547,33 +558,40 @@ margin-right: auto;
   font-weight: 400px;
 }
 
-.radio {
-  width: 414px;
-}
-
-.checkbox {
-  width: 702px;
-}
-
 .filters__item {
+  margin-right: 20px;
+
   font-weight: 400;
 }
 
-.filters__group {
+.filters__group,
+.filters__sorting {
+  margin: 0;
+  padding: 0;
   margin-right: 15px;
+
   border-style: none;
+}
+
+.range {
+  width: 188px;
 }
 
 .filters__list,
 .filters__sorting,
 .range {
+  padding: 10px 15px;
+
   border-radius: 50px;
   background-color: rgba(248, 247, 244, 0.2);
 }
 
 .filters__btn {
+  align-self: flex-end;
+  margin-bottom: 11px;
   width: 141px;
   height: 36px;
+
   font: inherit;
   color: #ffffff;
   text-align: center;
@@ -581,7 +599,6 @@ margin-right: auto;
   background-color: rgba(248, 247, 244, 0.2);
   border: 2px solid #ffffff;
   border-radius: 50px;
-  align-self: flex-end;
 }
 
 .filters__btn:hover {
@@ -597,18 +614,20 @@ margin-right: auto;
 }
 
 .paginator {
+  justify-content: flex-end;
   padding-bottom: 30px;
   margin-bottom: 20px;
+
   text-align: right;
+
   border-bottom: 1px solid #ffffff;
 }
 
 .paginator-item {
-  display: inline-block;
-  width: 15px;
-  padding: 5px;
+  width: 25px;
+  height: 25px;
+
   text-align: center;
-  vertical-align: middle;
   font-weight: 400;
 
   border-radius: 50px;
@@ -658,12 +677,18 @@ margin-right: auto;
   width: 170px;
 }
 
+.social-btn {
+  margin-right: 10px;
+}
+
 .header__item .menu__list,
 .header__user-item .search__form,
 .header__user-item .signin,
 .header__user-item .cart,
 .catalog__item .catalog__btn,
-.feedback {
+.feedback,
+.inner--hidden,
+.btn--hidden {
   display: none;
 }
  
@@ -675,13 +700,7 @@ margin-right: auto;
   display: block;
 }
 
-.centering {
-  width: 1146px;
-  margin: 0 auto;
-}
-
 .flexparent {
   display: flex;
-  /*flex-wrap: wrap;*/
 }
 
