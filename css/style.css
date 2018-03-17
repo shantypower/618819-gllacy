@@ -308,8 +308,7 @@ a {
 .slider__controls {
   margin: 0;
   padding: 0;
-  margin-right: 356px;
-
+  align-items: center;
   border-style: none;
 }
 
@@ -322,10 +321,14 @@ a {
   text-align: center;
 }
 
-.slider .slider__btn {
-  justify-content: center;
-  width: 278px;
+.slider__radio {
+  margin-right: 7px;
+}
 
+.slider .slider__btn {
+  width: 278px;
+  margin: 0 auto;
+  
   font-size: 32px;
   line-height: 44px;
 
@@ -355,7 +358,9 @@ a {
 .offers,
 .catalog,
 .newsletter,
-.filters {
+.filters,
+.slider,
+.slider__content {
   margin-bottom: 40px;
 }
 
