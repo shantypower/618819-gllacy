@@ -48,6 +48,7 @@ a {
 
   list-style: none;
 }
+
 .header__link,
 .menu__link,
 .footer__link,
@@ -56,6 +57,7 @@ a {
 .paginator__link {
   color: #ffffff;
 }
+
 .footer__link {
   color: #ffffff;
 
@@ -123,30 +125,70 @@ a {
   font-weight: bold;
 }
 
+.logo {
+  position: absolute;
+}
+
+.header__nav {
+  /*position: absolute;*/
+  margin-left: 158px;
+  justify-content: space-between;
+  align-items: space-between;
+  flex-wrap: wrap;
+}
+
+.header__list {
+  width: 700px;
+}
+
+.header__user-list {
+  width: 267px;
+}
+
+.header__phone {
+  justify-content: space-between;
+}
+
+.header__text {
+  width: 167px;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: right;
+}
+
+.breadcrumbs {
+width: 267px;
+margin-right: auto;
+}
+
 .menu__list {
   width: 143px;
 
   background-color: #f8f7f4;
   border-radius: 8px;
 }
+
 .menu__item {
   padding: 13px 20px;
 
   font-weight: 300;
 }
+
 .menu__item:first-child {
   border-bottom: 1px solid #d1d0ce;
   border-radius: 8px 8px 0 0;
 }
+
 .menu__item:last-child {
   border-radius: 0 0 8px 8px;
 }
+
 .menu__item,
-.header__user-link,
-.header__text {
+.header__user-link {
   font-size: 14px;
   line-height: 16px;
 }
+
 .menu__item:hover {
   background-color: #fbded7;
 }
@@ -173,7 +215,6 @@ a {
   border-radius: 50px;
 }
 .header__user-link:hover {
-
   font-size: 14px;
   line-height: 16px;
   font-weight: 400px;
@@ -217,9 +258,11 @@ a {
 .cell:not(:nth-child(3)) {
   white-space: nowrap;
 }
+
 .cart__content {
   border-collapse: collapse;
 }
+
 .row:nth-last-of-type(3) .cell {
   border-bottom: 1px solid #cacac7;
 }
@@ -228,6 +271,7 @@ a {
   color: #b2b2b1;
   white-space: nowrap;
 }
+
 .row:nth-last-child(2) .cell {
   font-size: 15px;
   line-height: 18px;
@@ -236,7 +280,7 @@ a {
 }
 
 .cart__btn {
-  float: right;
+  
 }
 
 .text--big {
@@ -244,17 +288,39 @@ a {
   line-height: 24px;
 }
 
+.slider {
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.slider__inner {
+  
+}
+
+.slider__controls {
+  margin: 0;
+  margin-left: 0;
+  padding: 0;
+  width: 80px;
+  border-style: none;
+}
+
 .slider__title {
+  width: 670px;
+  margin: 0 auto;
   font-size: 60px;
   line-height: 60.35px;
   text-align: center;
 }
 
 .slider .slider__btn {
+  margin-right: auto;
   width: 278px;
   font-size: 32px;
   line-height: 44px;
+  align-self: flex-end;
 }
+
 .btn {
   padding: 10px 15px;
 
@@ -269,16 +335,34 @@ a {
   border-radius: 50px;
 }
 
+.offers__list,
+.catalog__list,
+.newsletter__list,
+.filters__list {
+  justify-content: space-between;
+}
+
+.offers,
+.catalog,
+.newsletter,
+.filters {
+  margin-bottom: 40px;
+}
+
 .offers__btn {
   background-image: linear-gradient(to bottom, #f16743, #e64c37);
 }
 
+.offers__item {
+  width: 560px;
+}
+
 .offers__item:first-child {
-  background: url("../img/raspberry-bg.jpg") no-repeat;
+  background: url("../img/raspberry-bg.jpg") no-repeat center;
 }
 
 .offers__item:last-child {
-  background: url("../img/chocolate-bg.jpg") no-repeat;
+  background: url("../img/chocolate-bg.jpg") no-repeat center;
 }
 
 .offers__title {
@@ -291,10 +375,15 @@ a {
   line-height: 22px;
 }
 
+.catalog__list {
+  flex-wrap: wrap;
+}
+
 .catalog__item {
   width: 267px;
 
 }
+
 .catalog__item:hover {
   background-color: rgba(255, 255, 255, 0.2);
   border-radius: 8px;
@@ -324,8 +413,9 @@ a {
 }
 
 .features {
+  margin-bottom: 40px;
+  background: url("../img/vaflya.jpg") repeat center;
   background-color: #eaddc1;
-  background-image: url("../img/vaflya.jpg");
 }
 
 .features__description {
@@ -333,6 +423,15 @@ a {
   line-height: 30px;
   font-weight: 400;
   color: #323232;
+}
+
+.features__list {
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.features__item {
+  width: 540px;
 }
 
 .features__text {
@@ -354,14 +453,14 @@ a {
   font-weight: bold;
   color: #323232;
   text-decoration: underline;
-
 }
+
 .newsletter__item:first-child {
-  background-image: url("../img/strawberry-bg.jpg");
+  background: url("../img/strawberry-bg.jpg") no-repeat center;
 }
 
 .newsletter__item:last-child {
-  background-image: url("../img/post-bg.jpg");
+  background: url("../img/post-bg.jpg") no-repeat center;
 }
 
 .newsletter__bg {
@@ -376,7 +475,13 @@ a {
   color: #5a5a5a;
 }
 
+.map__bg {
+  width: 1200px;
+  margin: 0 auto;
+}
+
 .map__box {
+  position: relative;
   width:302px;
   height:305px;
 
@@ -442,19 +547,33 @@ a {
   font-weight: 400px;
 }
 
+.radio {
+  width: 414px;
+}
+
+.checkbox {
+  width: 702px;
+}
+
 .filters__item {
   font-weight: 400;
 }
 
 .filters__group {
+  margin-right: 15px;
   border-style: none;
+}
+
+.filters__list,
+.filters__sorting,
+.range {
   border-radius: 50px;
   background-color: rgba(248, 247, 244, 0.2);
 }
 
 .filters__btn {
-  padding: 8px 28px;
-
+  width: 141px;
+  height: 36px;
   font: inherit;
   color: #ffffff;
   text-align: center;
@@ -462,6 +581,7 @@ a {
   background-color: rgba(248, 247, 244, 0.2);
   border: 2px solid #ffffff;
   border-radius: 50px;
+  align-self: flex-end;
 }
 
 .filters__btn:hover {
@@ -476,10 +596,17 @@ a {
   box-shadow: 0 -1px 10px black;
 }
 
-.paginator-item {
-  width: 25px;
-  height: 25px;
+.paginator {
+  padding-bottom: 30px;
+  margin-bottom: 20px;
+  text-align: right;
+  border-bottom: 1px solid #ffffff;
+}
 
+.paginator-item {
+  display: inline-block;
+  width: 15px;
+  padding: 5px;
   text-align: center;
   vertical-align: middle;
   font-weight: 400;
@@ -498,6 +625,10 @@ a {
   background-color: rgba(255, 255, 255, 0.2);
 }
 
+.footer {
+  justify-content: space-between;
+}
+
 .footer__menu-item {
   font-size: 13px;
   line-height: 18px;
@@ -514,11 +645,25 @@ a {
   font-weight: bold;
 }
 
+.footer__social-list {
+  width: 186px;
+}
+
+.footer__menu-list {
+  width: 340px;
+  flex-wrap: wrap;
+}
+
+.footer__menu-item {
+  width: 170px;
+}
+
 .header__item .menu__list,
 .header__user-item .search__form,
 .header__user-item .signin,
 .header__user-item .cart,
-.catalog__item .catalog__btn {
+.catalog__item .catalog__btn,
+.feedback {
   display: none;
 }
  
@@ -529,3 +674,14 @@ a {
 .header__user-item:hover .search__form {
   display: block;
 }
+
+.centering {
+  width: 1146px;
+  margin: 0 auto;
+}
+
+.flexparent {
+  display: flex;
+  /*flex-wrap: wrap;*/
+}
+

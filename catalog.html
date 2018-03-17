@@ -9,9 +9,9 @@
   </head>
   <body>
 
-    <header class="header">
+    <header class="header centering">
       <div class="logo"><a href="index.html" class="logo__link"><img src="img/logo.svg" width="154" height="64" alt="Логотип магазина мороженого «Глейси»"></a>  </div>
-      <nav class="header__nav">
+      <nav class="header__nav flexparent">
         <ul class="header__list">
           <li class="header__item">
             <a href="catalog.html" class="header__link header__link--current">Каталог</a>
@@ -81,30 +81,28 @@
             </div>
           </li>
         </ul>
-
-        <div class="header__phone">
-          <p class="header__text">С 10 до 20, ежедневно<span class="text--big">8 812 450-25-25</span></p>
-        </div>
       </nav>
+      <div class="header__phone flexparent">
+        <ul class="breadcrumbs">
+          <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="index.html">Главная</a><span>»</span></li>
+          <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="catalog.html">Каталог</a><span>»</span></li>
+          <li class="breadcrumbs__item breadcrumbs__item--current" aria-current="page"><span class="visually-hidden">Текущий пункт меню</span>Сливочное</li>
+        </ul>
+        <p class="header__text">С 10 до 20, ежедневно<span class="text--big"> 8 812 450-25-25</span></p>
+      </div>
     </header>
 
-    <main class="container">
+    <main class="container centering">
       <h1 class="visually-hidden">Каталог товаров</h1>
-
-      <ul class="breadcrumbs">
-        <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="index.html">Главная</a><span>»</span></li>
-        <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="catalog.html">Каталог</a><span>»</span></li>
-        <li class="breadcrumbs__item breadcrumbs__item--current" aria-current="page"><span class="visually-hidden">Текущий пункт меню</span>Сливочное</li>
-      </ul>
       <h2 class="filter__title">Сливочное мороженое</h2>
 
       <section class="filters">
         <h2 class="visually-hidden">Фильтры выбора</h2>
         <form class="filters__form" action="https://echo.htmlacademy.ru" method="get" oninput="priceoutput.value=pricechoice.value">
-          <div class="filters__top-filter">
+          <div class="filters__top-filter flexparent">
             <fieldset class="filters__group">
               <h3 class="filters__title">Сортировка:</h3>
-              <select name="sorting">
+              <select class="filters__sorting" name="sorting">
                 <option selected>по популярности</option>
                 <option>сначала недорогие</option>
                 <option>сначала дорогие</option>
@@ -117,7 +115,7 @@
             </fieldset>
             <fieldset class="filters__group">
               <h3 class="filters__title">Жирность:</h3>
-              <ul class="filters__list">
+              <ul class="filters__list flexparent">
                 <li class="filters__item"><label for="fatness-1" class="visually-hidden">0%</label><input class="filters__input filters__radio" type="radio" name="fatness" id="fatness-1" value="0">0%</li>
                 <li class="filters__item"><label for="fatness-2" class="visually-hidden">до 10%</label><input class="filters__input filters__radio" type="radio" name="fatness" id="fatness-2" value="less 10">до 10%</li>
                 <li class="filters__item"><label for="fatness-3" class="visually-hidden">до 30%</label><input class="filters__input filters__radio" type="radio" name="fatness" id="fatness-3" value="less 30">до 30%</li>
@@ -125,10 +123,10 @@
               </ul>
             </fieldset>
           </div>
-          <div class="filters__bottom-filter">
+          <div class="filters__bottom-filter flexparent">
             <fieldset class="filters__group">
               <h3 class="filters__title">Наполнители:</h3>
-              <ul class="filters__list">
+              <ul class="filters__list flexparent">
                 <li class="filters__item"><label class="visually-hidden" for="filler-1">шоколадные</label><input class="filters__input filters__checkbox" type="checkbox" name="chocolate" id="filler-1">шоколадные</li>
                 <li class="filters__item"><label class="visually-hidden" for="filler-2">сахарные присыпки</label><input class="filters__input filters__checkbox" type="checkbox" name="sugar" id="filler-2">сахарные присыпки</li>
                 <li class="filters__item"><label class="visually-hidden" for="filler-3">фрукты</label><input class="filters__input filters__checkbox" type="checkbox" name="fruits" id="filler-3">фрукты</li>
@@ -143,7 +141,7 @@
 
       <section class="catalog">
         <h3 class="visually-hidden">Каталог товаров</h3>
-        <ul class="catalog__list">
+        <ul class="catalog__list flexparent">
           <li class="catalog__item">
             <div class="catalog__image"><img src="img/1.jpg" width="267" height="267" alt="Фото мороженого"></div>
             <span class="catalog__price"><span class="price--big">310</span>/кг</span>
@@ -229,17 +227,17 @@
       </ul>
     </main>
 
-    <footer class="footer">
+    <footer class="footer flexparent centering">
       <ul class="footer__social-list">
         <li class="footer__social-item"><a href="#" class="social-btn">Твиттер</a></li>
         <li class="footer__social-item"><a href="#" class="social-btn">Инстаграм</a></li>
         <li class="footer__social-item"><a href="#" class="social-btn">Фейсбук</a></li>
         <li class="footer__social-item"><a href="#" class="social-btn">Вконтакте</a></li>
       </ul>
-      <ul class="footer__menu-list">
+      <ul class="footer__menu-list flexparent">
         <li class="footer__menu-item"><a href="#" class="footer__link"><span class="footer__text--bold">Для поставщиков</span></a></li>
-        <li class="footer__menu-item"><a href="#" class="footer__link">О производстве</a></li>
         <li class="footer__menu-item"><a href="#" class="footer__link">Наши документы</a></li>
+        <li class="footer__menu-item"><a href="#" class="footer__link">О производстве</a></li>
         <li class="footer__menu-item"><a href="#" class="footer__link">Экологические стандарты</a></li>
       </ul>
       <div class="footer__copyright">

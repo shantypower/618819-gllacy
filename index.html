@@ -11,9 +11,9 @@
 
 <body>
 
-  <header class="header">
+  <header class="header centering">
     <div class="logo"><a class="logo__link"><img src="img/logo.svg" width="154" height="64" alt="Логотип магазина мороженого «Глейси»"></a></div>
-    <nav class="header__nav">
+    <nav class="header__nav flexparent">
       <ul class="header__list">
         <li class="header__item">
           <a href="catalog.html" class="header__link">Каталог</a>
@@ -55,43 +55,45 @@
         </li>
         <li class="header__user-item"><a href="#" class="header__user-link">Пусто</a></li>
       </ul>
-
-      <div class="header__phone">
-        <p class="header__text">С 10 до 20, ежедневно<span class="text--big">8 812 450-25-25</span></p>
-      </div>
     </nav>
+    <div class="header__phone">
+        <p class="header__text">С 10 до 20, ежедневно<span class="text--big"> 8 812 450-25-25</span></p>
+    </div>
   </header>
 
-  <main class="container">
+  <main class="container centering">
     <h1 class="visually-hidden">Магазин мороженого «Глейси»</h1>
 
-    <section class="slider">
+    <section class="slider flexparent">
       <div class="slider__nav">
-        <input type="radio" id="btn-1" name="toggle" checked class="slider__btn">
-        <input type="radio" id="btn-2" name="toggle" class="slider__btn">
-        <input type="radio" id="btn-3" name="toggle" class="slider__btn">
-        <div class="slider__controls">
-          <label for="btn-1" class="visually-hidden">Первый слайд с мороженым</label>
-          <label for="btn-2" class="visually-hidden">Второй слайд с мороженым</label>
-          <label for="btn-3" class="visually-hidden">Третий слайд с мороженым</label>
-        </div>
         <div class="slider__inner">
           <img src="img/slide1.png" width="1045" height="881" alt="Спецпредложение">
-          <h2 class="slider__title">Крем-брюле и пломбир с малиновым джемом</h2>
         </div>
+        <h2 class="slider__title">Крем-брюле и пломбир с малиновым джемом</h2>
         <div class="slider__inner">
           <h2 class="slider__title">Шоколадный пломбир и лимонный сорбет</h2>
         </div>
         <div class="slider__inner">
           <h2 class="slider__title">Пломбир с помадкой и клубничный щербет</h2>
         </div>
+        <fieldset class="slider__controls">
+          <input type="radio" id="btn-1" name="toggle" checked class="slider__btn">
+          <input type="radio" id="btn-2" name="toggle" class="slider__btn">
+          <input type="radio" id="btn-3" name="toggle" class="slider__btn">
+          <div class="slider__labels">
+            <label for="btn-1" class="visually-hidden">Первый слайд с мороженым</label>
+            <label for="btn-2" class="visually-hidden">Второй слайд с мороженым</label>
+            <label for="btn-3" class="visually-hidden">Третий слайд с мороженым</label>
+          </div>
+        </fieldset>
+        
       </div>
       <a href="#" class="slider__btn btn">Давайте оба!</a>
     </section>
 
     <section class="offers">
       <h2 class="visually-hidden">Бонусы</h2>
-      <ul class="offers__list">
+      <ul class="offers__list flexparent">
         <li class="offers__item">
           <h3 class="offers__title">Малинка даром!</h3>
           <p class="offers__text">При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
@@ -107,7 +109,7 @@
 
     <section class="catalog">
       <h2 class="visually-hidden">Популярные товары</h2>
-      <ul class="catalog__list">
+      <ul class="catalog__list flexparent">
         <li class="catalog__item">
           <div class="catalog__image"><img src="img/1.jpg" width="267" height="267" alt="Фото мороженого"></div>
           <span class="catalog__price"><span class="price--big">310</span>/кг</span>
@@ -138,15 +140,15 @@
     <section class="features">
       <h2 class="visually-hidden">Наши преимущества</h2>
       <b class="features__description">Магазин Глэйси — это онлайн- и офлайн-магазин по продаже мороженого собственного производства на развес</b>
-      <ul class="features__list">
+      <ul class="features__list flexparent">
         <li class="features__item">
           <p class="features__text">Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</p>
         </li>
         <li class="features__item">
-          <p class="features__text">Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.</p>
+          <p class="features__text">Закупка ингредиентов производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.</p>
         </li>
         <li class="features__item">
-          <p class="features__text">Закупка ингредиентов производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.</p>
+          <p class="features__text">Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.</p>
         </li>
         <li class="features__item">
           <p class="features__text">Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.</p>
@@ -156,12 +158,12 @@
 
     <section class="newsletter">
       <h2 class="visually-hidden">Новости блога и ваши предложения</h2>
-      <ul class="newsletter__list">
-        <li class="newsletter__item">
+      <ul class="newsletter__list flexparent">
+        <li class="newsletter__item offers__item">
           <h3 class="newsletter__title">Новое в нашем блоге</h3>
           <a href="#" class="newsletter__link">10 способов сервировки фруктовых щербетов к столу</a>
         </li>
-        <li class="newsletter__item">
+        <li class="newsletter__item offers__item">
           <div class="newsletter__bg">
             <p class="newsletter__text">Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
             <form class="newsletter__form" action="https://echo.htmlacademy.ru" method="post">
@@ -174,7 +176,9 @@
       </ul>
     </section>
 
-    <section class="map">
+  </main>
+
+  <section class="map">
       <h2 class="visually-hidden">Расположение на карте и адрес</h2>
       <div class="map__bg"><img src="img/map.jpg" width="1200" height="430" alt="Адрес главного офиса и офлайн-магазина: ул. Большая Конюшенная 19/8, Санкт-Петербург"></div>
       <div class="map__box">
@@ -198,19 +202,17 @@
       <button class="feedback--close" type="button"><img src="img/cross-big.svg" alt="Закрыть"></button>
     </section>
 
-  </main>
-
-  <footer class="footer">
+  <footer class="footer flexparent centering">
       <ul class="footer__social-list">
         <li class="footer__social-item"><a href="#" class="social-btn">Твиттер</a></li>
         <li class="footer__social-item"><a href="#" class="social-btn">Инстаграм</a></li>
         <li class="footer__social-item"><a href="#" class="social-btn">Фейсбук</a></li>
         <li class="footer__social-item"><a href="#" class="social-btn">Вконтакте</a></li>
       </ul>
-      <ul class="footer__menu-list">
+      <ul class="footer__menu-list flexparent">
         <li class="footer__menu-item"><a href="#" class="footer__link"><span class="footer__text--bold">Для поставщиков</span></a></li>
-        <li class="footer__menu-item"><a href="#" class="footer__link">О производстве</a></li>
         <li class="footer__menu-item"><a href="#" class="footer__link">Наши документы</a></li>
+        <li class="footer__menu-item"><a href="#" class="footer__link">О производстве</a></li>
         <li class="footer__menu-item"><a href="#" class="footer__link">Экологические стандарты</a></li>
       </ul>
       <div class="footer__copyright">
