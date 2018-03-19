@@ -123,23 +123,20 @@ a {
   font-weight: bold;
 }
 
-.centering {
+.content .container {
+  padding-top: 10px;
+  padding-bottom: 30px;
+}
+
+.container {
   width: 1146px;
   margin: 0 auto;
   padding: 0 27px;
 }
 
-.header {
-  margin-top: 23px;
-}
-
-.logo {
-  position: absolute;
-}
-
-.header__nav {
-  margin-left: 158px;
+.header__top {
   justify-content: space-between;
+  align-items: center;
 }
 
 .header__list {
@@ -158,11 +155,15 @@ a {
   width: 267px;
 }
 
-.header__phone {
-  justify-content: flex-end;
+.header__bottom {
+  justify-content: space-between;
+  align-items: flex-end;
 }
 
 .header__text {
+  padding: 0;
+  margin: 0;
+  margin-left: auto;
   width: 167px;
 
   font-size: 14px;
@@ -171,7 +172,6 @@ a {
 }
 
 .breadcrumbs {
-  align-items: flex-end;
   width: 267px;
   margin-right: auto;
 }
@@ -259,6 +259,14 @@ a {
   width: 100px;
 }
 
+.slider__btn,
+.offers__btn,
+.catalog__btn,
+.map__btn,
+.cart__btn {
+  display: block;
+}
+
 .cart {
   width: 540px;
 
@@ -302,6 +310,10 @@ a {
 }
 
 .slider {
+  position: relative;
+}
+
+.slider {
   justify-content: center;
 }
 
@@ -328,10 +340,9 @@ a {
 .slider .slider__btn {
   width: 278px;
   margin: 0 auto;
-  
+
   font-size: 32px;
   line-height: 44px;
-
 }
 
 .btn {
@@ -491,11 +502,17 @@ a {
 }
 
 .map__bg {
+  position: relative;
+
   width: 1200px;
   margin: 0 auto;
 }
 
 .map__box {
+  position: absolute;
+  top: 60px;
+  right: 27px;
+
   width:302px;
   height:305px;
 
@@ -518,6 +535,10 @@ a {
 }
 
 .feedback {
+  position: absolute;
+  top: 265px;
+  left: 336px;
+
   width: 477px;
   height: 442px;
 
@@ -620,21 +641,18 @@ a {
 
 .paginator {
   justify-content: flex-end;
-  padding-bottom: 30px;
-  margin-bottom: 20px;
 
   text-align: right;
-
-  border-bottom: 1px solid #ffffff;
 }
 
 .paginator-item {
-  width: 25px;
+  min-width: 25px;
   height: 25px;
 
   text-align: center;
+  vertical-align: middle;
   font-weight: 400;
-
+  line-height: 25px;
   border-radius: 50px;
 }
 
@@ -649,8 +667,11 @@ a {
   background-color: rgba(255, 255, 255, 0.2);
 }
 
-.footer {
+.footer .container {
   justify-content: space-between;
+  align-items: center;
+
+  border-top: 1px solid #ffffff;
 }
 
 .footer__menu-item {
@@ -661,6 +682,9 @@ a {
 
 .footer__text,
 .footer__link {
+  padding: 0;
+  margin: 0;
+
   font-size: 12px;
   font-weight: normal;
 }
@@ -705,7 +729,7 @@ a {
   display: block;
 }
 
-.flexparent {
+.flexbox {
   display: flex;
 }
 
