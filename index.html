@@ -118,25 +118,25 @@
       <section class="catalog">
         <h2 class="visually-hidden">Популярные товары</h2>
         <ul class="catalog__list">
-          <li class="catalog__item">
+          <li class="catalog__item catalog__hit">
             <div class="catalog__image"><img src="img/1.png" width="267" height="267" alt="Фото мороженого"></div>
             <span class="catalog__price"><span class="price--big">310</span>/кг</span>
             <p class="catalog__description">Сливочное с апельсиновым джемом и цитрусовой стружкой</p>
             <a href="#" class="catalog__btn btn">Быстрый просмотр</a>
           </li>
-          <li class="catalog__item">
+          <li class="catalog__item catalog__hit">
             <div class="catalog__image"><img src="img/2.png" width="267" height="267" alt="Фото мороженого"></div>
             <span class="catalog__price"><span class="price--big">380</span>/кг</span>
            <p class="catalog__description">Сливочно-кофейное с кусочками шоколада</p>
             <a href="#" class="catalog__btn btn">Быстрый просмотр</a>
           </li>
-          <li class="catalog__item">
+          <li class="catalog__item catalog__hit">
             <div class="catalog__image"><img src="img/3.png" width="267" height="267" alt="Фото мороженого"></div>
             <span class="catalog__price"><span class="price--big">355</span>/кг</span>
             <p class="catalog__description">Сливочно-клубничное с присыпкой из белого шоколада</p>
             <a href="#" class="catalog__btn btn">Быстрый просмотр</a>
           </li>
-          <li class="catalog__item">
+          <li class="catalog__item catalog__hit">
             <div class="catalog__image"><img src="img/4.png" width="267" height="267" alt="Фото мороженого"></div>
             <span class="catalog__price"><span class="price--big">415</span>/кг</span>
             <p class="catalog__description">Сливочное крем-брюле с карамельной подливкой</p>
@@ -166,7 +166,7 @@
 
       <section class="newsletter">
         <h2 class="visually-hidden">Новости блога и ваши предложения</h2>
-        <ul class="newsletter__list flexbox">
+        <ul class="newsletter__list">
           <li class="newsletter__item offers__item">
             <h3 class="newsletter__title">Новое в нашем блоге</h3>
             <a href="#" class="newsletter__link">10 способов сервировки фруктовых щербетов к столу</a>
@@ -176,7 +176,7 @@
               <p class="newsletter__text">Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
               <form class="newsletter__form" action="https://echo.htmlacademy.ru" method="post">
                 <label for="e-mail-field" class="visually-hidden">Электронная почта</label><input class="newsletter__input" type="email" name="e-mail" id="e-mail-field" placeholder="Электронная почта" required>
-                <button class="newsletter_btn btn" type="submit">Отправить</button>
+                <button class="offers__btn btn" type="submit">Отправить</button>
               </form>
             </div>
           </li>
@@ -189,11 +189,11 @@
       <div class="map__bg">
         <img src="img/map.jpg" width="1200" height="430" alt="Адрес главного офиса и офлайн-магазина: ул. Большая Конюшенная 19/8, Санкт-Петербург">
         <div class="map__box">
-          <p class="map__text">Адрес главного офиса и офлайн-магазина: </p>
-          <p class="map__text--bold">ул. Большая Конюшенная 19/8, Санкт-Петербург</p>
-          <p class="map__text">Для заказов по телефону:</p>
-          <p class="map__text"><span class="map__text--bold">8 812 450-25-25</span>(с 10 до 20 ежедневно)</p>
-          <a href="#" class="map__btn btn">Форма обратной связи</a>
+          <div class="map__adress">
+            <p class="map__text">Адрес главного офиса<br>и офлайн-магазина:<br><span class="map__text--bold">ул. Большая Конюшенная 19/8, Санкт-Петербург</span></p>
+            <p class="map__text">Для заказов по телефону:<br><span class="map__text--bold">8 812 450-25-25</span><br>(с 10 до 20 ежедневно)</p>
+          </div>
+          <a href="#" class="offers__btn btn map__btn">Форма обратной связи</a>
         </div>
       </div>
       
@@ -206,7 +206,7 @@
         <label class="visually-hidden" for="user-name">Как вас зовут?</label><input class="feedback__field" type="text" name="user-name-field" id="user-name" placeholder="Как вас зовут?" required>
         <label class="visually-hidden" for="email">Ваша почта для ответа?</label><input class="feedback__field" type="email" name="email-field" id="email" placeholder="Ваша почта для ответа?" required>
         <label class="visually-hidden" for="letter-field">Напишите что-нибудь</label><textarea class="feedback__text" type="text" name="feedback-text" id="letter-field" placeholder="Напишите что-нибудь..." required></textarea>
-        <button class="btn" type="submit" name="subscribe">Отправить</button>
+        <button class="offers__btn btn" type="submit" name="subscribe">Отправить</button>
       </form>
       <button class="feedback--close" type="button"><img src="img/cross-big.svg" alt="Закрыть"></button>
     </section>
@@ -214,13 +214,13 @@
 
   <footer class="footer">
     <div class="container flexbox">
-      <ul class="footer__social-list flexbox">
-        <li class="footer__social-item"><a href="#" class="social-btn">Твиттер</a></li>
-        <li class="footer__social-item"><a href="#" class="social-btn">Инстаграм</a></li>
-        <li class="footer__social-item"><a href="#" class="social-btn">Фейсбук</a></li>
-        <li class="footer__social-item"><a href="#" class="social-btn">Вконтакте</a></li>
+      <ul class="footer__social-list">
+        <li class="footer__social-item"><a href="#" class="social-btn footer__tw"><span class="visually-hidden">Твиттер</span></a></li>
+        <li class="footer__social-item"><a href="#" class="social-btn footer__inst"><span class="visually-hidden">Инстаграм</span></a></li>
+        <li class="footer__social-item"><a href="#" class="social-btn footer__fb"><span class="visually-hidden">Фейсбук</span></a></li>
+        <li class="footer__social-item"><a href="#" class="social-btn footer__vk"><span class="visually-hidden">Вконтакте</span></a></li>
       </ul>
-      <ul class="footer__menu-list flexbox">
+      <ul class="footer__menu-list footer__heart">
         <li class="footer__menu-item"><a href="#" class="footer__link"><span class="footer__text--bold">Для поставщиков</span></a></li>
         <li class="footer__menu-item"><a href="#" class="footer__link">Наши документы</a></li>
         <li class="footer__menu-item"><a href="#" class="footer__link">О производстве</a></li>
