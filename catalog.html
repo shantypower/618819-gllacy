@@ -29,15 +29,17 @@
             <li class="header-item"><a href="info.html" class="header__link">О Компании</a></li>
           </ul>
         </nav>
-        <ul class="header__user-list flexbox">
-          <li class="header__user-item">
-            <a href="#" class="header__user-link">Поиск</a>
-            <form class="search__form" action="https://echo.htmlacademy.ru" method="get">
-              <label class="visually-hidden" for="search-field">Поле поиска</label><input class="search__input" type="search" name="search" id="search-field" placeholder="Что ищем?"><button class="visually-hidden" type="submit">Найти</button>
-            </form>
+        <ul class="header__user-list">
+          <li class="header__user-item header__search">
+            <a href="#" class="header__user-link header__loupe--hover"><span class="visually-hidden">Поиск</span></a>
+            <div class="search__box">
+              <form class="search__form" action="https://echo.htmlacademy.ru" method="get">
+                <label class="visually-hidden" for="search-field">Поле поиска</label><input class="search__input" type="search" name="search" id="search-field" placeholder="Что ищем?"><button class="visually-hidden" type="submit">Найти</button>
+              </form>
+            </div>
           </li>
-          <li class="header__user-item">
-            <a href="login.html" class="header__user-link">Вход</a>
+          <li class="header__user-item header__entrance">
+            <a href="login.html" class="header__user-link header__entrance--hover">Вход</a>
             <div class="signin">
               <form class="signin__form" action="https://echo.htmlacademy.ru" method="post" autocomplete="off">
                 <p class="signin__block">
@@ -56,8 +58,8 @@
               </form>
             </div>
           </li>
-          <li class="header__user-item">
-            <a href="#" class="header__user-link">2 товара</a>
+          <li class="header__user-item header__cart--red">
+            <a href="#" class="header__user-link cart--full">2 товара</a>
             <div class="cart">
               <table class="cart__content">
                 <tr class="row">
@@ -65,7 +67,7 @@
                   <td class="cell"><img src="img/ice-cream1-small.jpg" width="33" height="33" alt="Фото товара"></td>
                   <td class="cell">Пломбир с апельсиновым джемом</td>
                   <td class="cell">1,5 кг х</td>
-                  <td class="cell--grey">200 руб.</td>
+                  <td class=" cell cell--grey">200 руб.</td>
                   <td class="cell">300 руб.</td>
                 </tr>
                 <tr class="row">
@@ -73,16 +75,14 @@
                   <td class="cell"><img src="img/ice-cream-2-small.jpg" width="33" height="33" alt="Фото товара"></td>
                   <td class="cell">Клубничный пломбир с присыпкой  из белого шоколада</td>
                   <td class="cell">1,5 кг х</td>
-                  <td class="cell--grey">300 руб.</td>
+                  <td class=" cell cell--grey">300 руб.</td>
                   <td class="cell">450 руб.</td>
                 </tr>
                 <tr class="row">
                   <td class="cell" colspan="6">Итого: 750 руб.</td>
                 </tr>
-                <tr class="row">
-                  <td class="cell" colspan="6"><a href="#" class="cart__btn btn">Оформить заказ</a></td>
-                </tr>
               </table>
+                <a href="#" class="signin__btn btn cart__btn">Оформить заказ</a>
             </div>
           </li>
         </ul>
