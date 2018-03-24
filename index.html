@@ -45,17 +45,19 @@
             <a href="login.html" class="header__user-link"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="21" height="19" viewBox="0 0 21 19"><g fill="#ffffff"><path d="M6 14.875L12.917 9.5 6 4.125v2.917H-.042v4.917H6z"/><path d="M18 0H5C3.9 0 3 .9 3 2v2h2V2h13v15H5v-2H3v2c0 1.1.9 2 2 2h13c1.1 0 2-.9 2-2V2c0-1.1-.9-2-2-2z"/></g></svg>Вход</a>
             <div class="signin">
               <form class="signin__form" action="https://echo.htmlacademy.ru" method="post">
-                <p>
+                <p class="signin__block">
                   <label for="email-field" class="visually-hidden">Электронная почта (обязательно)</label><input class="signin__input" type="email" name="email" id="email-field" placeholder="Электронная почта" required>
                 </p>
-                <p>
+                <p class="signin__block">
                   <label for="password-field" class="visually-hidden">Пароль (обязательно)</label><input class="signin__input" type="password" name="password" id="password-field" placeholder="Пароль" autocomplete="off" required>
                 </p>
-                <button class="signin__btn btn" type="submit">Войти</button>
-                <ul class="signin__list">
-                  <li class="signin__item"><a href="" class="signin__link">Забыли пароль?</a></li>
-                  <li class="signin__item"><a href="" class="signin__link">Новая регистрация</a></li>
-                </ul>
+                <div class="signin__bottom">
+                  <button class="signin__btn btn" type="submit">Войти</button>
+                  <ul class="signin__list">
+                    <li class="signin__item"><a href="" class="signin__link">Забыли пароль?</a></li>
+                    <li class="signin__item"><a href="" class="signin__link">Новая регистрация</a></li>
+                  </ul>
+                </div>
               </form>
             </div>
           </li>
@@ -73,7 +75,7 @@
       <h1 class="visually-hidden">Магазин мороженого «Глейси»</h1>
 
       <section class="slider">
-        <div class="slider-controls">
+        <div class="slider__controls">
           <label for="product-1">Первый</label>
           <label for="product-2">Второй</label>
           <label for="product-3">Третий</label>
