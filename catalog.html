@@ -134,10 +134,10 @@
             <fieldset class="filters__group">
               <h3 class="filters__title">Жирность:</h3>
               <ul class="filters__list flexbox">
-                <li class="filters__item"><label for="fatness-1" class="radio__label">0%</label><input class="filters__input filters__radio visually-hidden" type="radio" name="fatness" id="fatness-1" value="0"></li>
-                <li class="filters__item"><label for="fatness-2" class="radio__label">до 10%</label><input class="filters__input filters__radio visually-hidden" type="radio" name="fatness" id="fatness-2" value="less 10" checked></li>
-                <li class="filters__item"><label for="fatness-3" class="radio__label">до 30%</label><input class="filters__input filters__radio visually-hidden" type="radio" name="fatness" id="fatness-3" value="less 30"></li>
-                <li class="filters__item"><label for="fatness-4" class="radio__label">выше 30%</label><input class="filters__input filters__radio visually-hidden" type="radio" name="fatness" id="fatness-4" value="over 30"></li>
+                <li class="filters__item"><input class="filters__input filters__radio visually-hidden" type="radio" name="fatness" id="fatness-1" value="0"><label for="fatness-1" class="radio__label">0%</label></li>
+                <li class="filters__item"><input class="filters__input filters__radio visually-hidden" type="radio" name="fatness" id="fatness-2" value="less 10" checked><label for="fatness-2" class="radio__label">до 10%</label></li>
+                <li class="filters__item"><input class="filters__input filters__radio visually-hidden" type="radio" name="fatness" id="fatness-3" value="less 30"><label for="fatness-3" class="radio__label">до 30%</label></li>
+                <li class="filters__item"><input class="filters__input filters__radio visually-hidden" type="radio" name="fatness" id="fatness-4" value="over 30"><label for="fatness-4" class="radio__label">выше 30%</label></li>
               </ul>
             </fieldset>
           </div>
@@ -145,11 +145,11 @@
             <fieldset class="filters__group">
               <h3 class="filters__title">Наполнители:</h3>
               <ul class="filters__list flexbox">
-                <li class="filters__item"><label class="checkbox__label" for="filler-1">шоколадные</label><input class="filters__input filters__checkbox visually-hidden" type="checkbox" name="chocolate" id="filler-1" checked></li>
-                <li class="filters__item"><label class="checkbox__label" for="filler-2">сахарные присыпки</label><input class="filters__input filters__checkbox visually-hidden" type="checkbox" name="sugar" id="filler-2" checked></li>
-                <li class="filters__item"><label class="checkbox__label" for="filler-3">фрукты</label><input class="filters__input filters__checkbox visually-hidden" type="checkbox" name="fruits" id="filler-3"></li>
-                <li class="filters__item"><label class="checkbox__label" for="filler-4">сиропы</label><input class="filters__input filters__checkbox visually-hidden" type="checkbox" name="syrup" id="filler-4"></li>
-                <li class="filters__item"><label class="checkbox__label" for="filler-5">джемы</label><input class="filters__input filters__checkbox visually-hidden" type="checkbox" name="jam" id="filler-5"></li>
+                <li class="filters__item"><span class="checkbox__icon"></span><input class="filters__input filters__checkbox visually-hidden" type="checkbox" name="chocolate" id="filler-1" checked><label class="checkbox__label" for="filler-1">шоколадные</label></li>
+                <li class="filters__item"><span class="checkbox__icon"></span><input class="filters__input filters__checkbox visually-hidden" type="checkbox" name="sugar" id="filler-2" checked><label class="checkbox__label" for="filler-2">сахарные присыпки</label></li>
+                <li class="filters__item"><span class="checkbox__icon"></span><input class="filters__input filters__checkbox visually-hidden" type="checkbox" name="fruits" id="filler-3"><label class="checkbox__label" for="filler-3">фрукты</label></li>
+                <li class="filters__item"><span class="checkbox__icon"></span><input class="filters__input filters__checkbox visually-hidden" type="checkbox" name="syrup" id="filler-4"><label class="checkbox__label" for="filler-4">сиропы</label></li>
+                <li class="filters__item"><span class="checkbox__icon"></span><input class="filters__input filters__checkbox visually-hidden" type="checkbox" name="jam" id="filler-5"><label class="checkbox__label" for="filler-5">джемы</label></li>
               </ul>
             </fieldset>
             <button class="filters__btn" type="submit">Применить</button>
@@ -159,7 +159,7 @@
 
       <section class="catalog">
         <h3 class="visually-hidden">Каталог товаров</h3>
-        <ul class="catalog__list flexbox">
+        <ul class="catalog__list">
           <li class="catalog__item">
             <div class="catalog__image"><img src="img/1.png" width="267" height="267" alt="Фото мороженого"></div>
             <span class="catalog__price"><span class="price--big">310</span>/кг</span>
