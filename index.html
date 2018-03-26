@@ -207,12 +207,13 @@
       <h2 class="feedback__title">Мы обязательно вам ответим!</h2>
       <!-- Форма обратной связи-->
       <form class="feedback__form" action="https://echo.htmlacademy.ru" method="post">
-        <label class="visually-hidden" for="user-name">Как вас зовут?</label><input class="feedback__field" type="text" name="user-name-field" id="user-name" placeholder="Как вас зовут?" required>
-        <label class="visually-hidden" for="email">Ваша почта для ответа?</label><input class="feedback__field" type="email" name="email-field" id="email" placeholder="Ваша почта для ответа?" required>
+        <label class="visually-hidden" for="user-name">Как вас зовут?</label><input class="feedback__field input__name" type="text" name="user-name-field" id="user-name" placeholder="Как вас зовут?" required>
+        <label class="visually-hidden" for="email">Ваша почта для ответа?</label><input class="feedback__field input__email" type="email" name="email-field" id="email" placeholder="Ваша почта для ответа?" required>
         <label class="visually-hidden" for="letter-field">Напишите что-нибудь</label><textarea class="feedback__text" type="text" name="feedback-text" id="letter-field" placeholder="Напишите что-нибудь..." required></textarea>
         <button class="offers__btn btn" type="submit" name="subscribe">Отправить</button>
       </form>
-      <button class="feedback--close" type="button"><img src="img/cross-big.svg" alt="Закрыть"></button>
+      <button class="feedback--close" type="button"></button>
+      <div class="feedback__overlay"></div>
     </section>
   </main>
 
