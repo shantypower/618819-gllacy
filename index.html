@@ -119,31 +119,31 @@
         </ul>
       </section>
 
-      <section class="catalog">
+      <section class="catalog catalog__hit">
         <h2 class="visually-hidden">Популярные товары</h2>
         <ul class="catalog__list">
           <li class="catalog__item catalog__hit">
             <div class="catalog__image"><img src="img/1.png" width="267" height="267" alt="Фото мороженого"></div>
             <span class="catalog__price"><span class="price--big">310</span>/кг</span>
-            <p class="catalog__description">Сливочное с апельсиновым джемом и цитрусовой стружкой</p>
+            <span class="catalog__description">Сливочное с апельсиновым джемом и цитрусовой стружкой</span>
             <a href="#" class="catalog__btn btn signin__btn">Быстрый просмотр</a>
           </li>
           <li class="catalog__item catalog__hit">
             <div class="catalog__image"><img src="img/2.png" width="267" height="267" alt="Фото мороженого"></div>
             <span class="catalog__price"><span class="price--big">380</span>/кг</span>
-           <p class="catalog__description">Сливочно-кофейное с кусочками шоколада</p>
+           <span class="catalog__description">Сливочно-кофейное с кусочками шоколада</span>
             <a href="#" class="catalog__btn btn signin__btn">Быстрый просмотр</a>
           </li>
           <li class="catalog__item catalog__hit">
             <div class="catalog__image"><img src="img/3.png" width="267" height="267" alt="Фото мороженого"></div>
             <span class="catalog__price"><span class="price--big">355</span>/кг</span>
-            <p class="catalog__description">Сливочно-клубничное с присыпкой из белого шоколада</p>
+            <span class="catalog__description">Сливочно-клубничное с присыпкой из белого шоколада</span>
             <a href="#" class="catalog__btn btn signin__btn">Быстрый просмотр</a>
           </li>
           <li class="catalog__item catalog__hit">
             <div class="catalog__image"><img src="img/4.png" width="267" height="267" alt="Фото мороженого"></div>
             <span class="catalog__price"><span class="price--big">415</span>/кг</span>
-            <p class="catalog__description">Сливочное крем-брюле с карамельной подливкой</p>
+            <span class="catalog__description">Сливочное крем-брюле с карамельной подливкой</span>
             <a href="#" class="catalog__btn btn signin__btn">Быстрый просмотр</a>
           </li>
         </ul>
@@ -218,19 +218,23 @@
   </main>
 
   <footer class="footer">
-    <div class="container flexbox">
+    <div class="container">
       <ul class="footer__social-list">
         <li class="footer__social-item"><a href="#" class="social-btn footer__tw"><span class="visually-hidden">Твиттер</span></a></li>
         <li class="footer__social-item"><a href="#" class="social-btn footer__inst"><span class="visually-hidden">Инстаграм</span></a></li>
         <li class="footer__social-item"><a href="#" class="social-btn footer__fb"><span class="visually-hidden">Фейсбук</span></a></li>
         <li class="footer__social-item"><a href="#" class="social-btn footer__vk"><span class="visually-hidden">Вконтакте</span></a></li>
       </ul>
-      <ul class="footer__menu-list footer__heart">
-        <li class="footer__menu-item"><a href="#" class="footer__link"><span class="footer__text--bold">Для поставщиков</span></a></li>
-        <li class="footer__menu-item"><a href="#" class="footer__link">Наши документы</a></li>
-        <li class="footer__menu-item"><a href="#" class="footer__link">О производстве</a></li>
-        <li class="footer__menu-item"><a href="#" class="footer__link">Экологические стандарты</a></li>
-      </ul>
+      <div class="menu-list__wrapper">
+        <ul class="footer__menu-list footer__heart menu-list--left">
+          <li class="footer__menu-item"><a href="#" class="footer__link"><span class="footer__text--bold">Для поставщиков</span></a></li>
+          <li class="footer__menu-item"><a href="#" class="footer__link">О производстве</a></li>
+        </ul>
+        <ul class="footer__menu-list menu-list--right">
+          <li class="footer__menu-item"><a href="#" class="footer__link">Наши документы</a></li>
+          <li class="footer__menu-item"><a href="#" class="footer__link">Экологические стандарты</a></li>
+        </ul>
+      </div>
       <div class="footer__copyright">
         <img src="img/logo-htmlacademy.svg" width="108" height="39" alt="Логотип htmlacademy" class="footer__logo">
         <p class="footer__text">Сделано в <a href="https://htmlacademy.ru/" class="footer__link">HTML Academy </a>© 2018</p>
