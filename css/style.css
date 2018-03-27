@@ -451,13 +451,20 @@ input[type="radio"].visually-hidden {
   width: 100%;
 
   font: inherit;
-  font-weight: normal;
+  font-weight: bold;
   font-size: 14px;
   line-height: 24px;
-  color: #999999;
+  color: #323232;
 
   border: 1px solid #d3d3d2;
   border-radius: 5px;
+}
+
+.signin__input::placeholder,
+.search__input::placeholder,
+.newsletter__input::placeholder {
+  color: #999999;
+  font-weight: normal;
 }
 
 .signin__input:hover,
@@ -515,14 +522,13 @@ input[type="radio"].visually-hidden {
 
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  align-items: flex-start;
   padding: 16px 12px 20px 16px;
-  width: 510px;
+  width: 512px;
 
   font-size: 13px;
   line-height: 16px;
   font-weight: normal;
-  text-align: left;
   color: #323232;
 
   background-color: #f8f7f4;
@@ -530,17 +536,38 @@ input[type="radio"].visually-hidden {
 }
 
 .cell {
-  padding: 10px 5px 20px 5px;
+  padding: 0;
+  padding-top: 10px;
+  padding-bottom: 12px;
+  vertical-align: center;
 }
 
-.cell:not(:nth-child(3)) {
-  white-space: nowrap;
+.cell:not(cell__item) {
+  word-wrap: normal;
+}
+
+.cell__btn {
+  padding-right: 12px;
+}
+
+.cell__img {
+  word-wrap: break-word;
+}
+
+.cell__item {
+  padding-left: 15px;
+  padding-right: 28px;
+  width: 218px;
+  text-align: left;
+}
+
+.cell__total {
+  padding-right: 9px;
 }
 
 .cart__content {
+  width: 100%;
   border-collapse: collapse;
-
-  vertical-align: top;
 }
 
 .row:nth-last-of-type(2) .cell {
@@ -548,8 +575,9 @@ input[type="radio"].visually-hidden {
 }
 
 .cell--grey {
+  padding-right: 28px;
+
   color: #b2b2b1;
-  white-space: nowrap;
 }
 
 .row:last-child .cell {
@@ -594,15 +622,8 @@ input[type="radio"].visually-hidden {
   font-weight: 800;
 }
 
-.slider__btn {
-  width: 278px;
-  margin: 0 auto;
-
-  font-size: 32px;
-  line-height: 44px;
-}
-
 .btn {
+  display: inline-block;
   padding: 12px 44px;
 
   font-size: 31px;
@@ -621,6 +642,12 @@ input[type="radio"].visually-hidden {
   border: none;
 
   cursor: pointer;
+}
+
+.slider__btn {
+
+  font-size: 32px;
+  line-height: 44px;
 }
 
 .btn:hover {
@@ -721,13 +748,15 @@ input[type="radio"].visually-hidden {
 
 .offers__title {
   margin: 0;
+  margin-bottom: 15px;
 
   font-size: 35px;
   line-height: 41px;
 }
 
 .offers__text {
-  margin-bottom: 45px;
+  margin: 0;
+  margin-bottom: 43px;
 
   font-size: 18px;
   line-height: 22px;
@@ -745,7 +774,6 @@ input[type="radio"].visually-hidden {
 
 .offers,
 .newsletter,
-.filters,
 .slider,
 .catalog:not(.catalog__popular) {
   margin-bottom: 42px;
@@ -808,7 +836,7 @@ input[type="radio"].visually-hidden {
 }
 
 .catalog__image {
-  margin-bottom: 13px;
+  margin-bottom: 11px;
 }
 
 .catalog__price {
@@ -853,7 +881,10 @@ input[type="radio"].visually-hidden {
   position: relative;
 
   margin-bottom: 40px;
-  padding: 29px 20px;
+  padding-top: 27px;
+  padding-bottom: 23px;
+  padding-left: 20px;
+  padding-right: 20px;
 
   background: url("../img/vaflya.jpg") repeat center;
   background-color: #eaddc1;
@@ -886,7 +917,7 @@ input[type="radio"].visually-hidden {
 
   position: absolute;
   top: 5px;
-  left: -55px;
+  left: -60px;
 
   width: 61px;
   height: 61px;
@@ -912,7 +943,8 @@ input[type="radio"].visually-hidden {
 }
 
 .features__text {
-  margin-bottom: 0;
+  margin: 0;
+  margin-top: 22px;
 
   line-height: 22px;
   font-weight: 200;
@@ -931,6 +963,7 @@ input[type="radio"].visually-hidden {
 
 .newsletter__title {
   margin: 0;
+  margin-bottom: 5px;
 
   font-size: 16px;
   line-height: 22px;
@@ -953,7 +986,7 @@ input[type="radio"].visually-hidden {
 }
 
 .newsletter__item:first-child {
-  padding-top: 25px;
+  padding-top: 24px;
 
   background: url("../img/strawberry-bg.jpg") no-repeat center;
 }
@@ -966,13 +999,18 @@ input[type="radio"].visually-hidden {
 }
 
 .newsletter__bg {
-  padding: 15px 20px;
+  box-sizing: border-box;
+  margin: 4px 5px;
+  padding: 30px 20px;
 
   background-color: #f8f7f4;
   border-radius: 15px;
 }
 
 .newsletter__text {
+  margin: 0px;
+  margin-bottom: 34px;
+
   line-height: 22px;
   font-weight: normal;
   color: #5a5a5a;
@@ -982,9 +1020,6 @@ input[type="radio"].visually-hidden {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-
-  margin-top: 27px;
-  margin-bottom: 27px;
 }
 
 .newsletter__input {
@@ -1031,8 +1066,8 @@ input[type="radio"].visually-hidden {
 .offers__btn {
   align-self: flex-end;
 
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 22px;
+  padding-right: 22px;
 
   font-size: 18px;
   line-height: 24px;
@@ -1205,18 +1240,24 @@ input[type="radio"].visually-hidden {
   font-weight: normal;
 }
 
+.filters {
+  margin-bottom: 22px;
+}
+
 .filter__title {
   padding: 0;
   margin: 0;
-  margin-bottom: 13px;
+  margin-bottom: 26px;
 
   font-size: 35px;
   line-height: 41px;
 }
 
-.filters__title {
+.filters__title,
+.price-controls {
+  margin: 0;
   margin-left: 15px;
-  margin-bottom: 7px;
+  margin-bottom: 2px;
 
   font-size: 14px;
   line-height: 16px;
@@ -1389,17 +1430,13 @@ input[type="radio"].visually-hidden {
   display: flex;
   justify-content: flex-start;
   align-items: flex-end;
-
-  margin-top: 11px;
-  margin-left: 15px;
-
-  font-size: 14px;
 }
 
 .filters__list,
 .filters__sorting,
 .range {
   padding: 10px 0px 10px 12px;
+  margin-bottom: 16px;
 
   border-radius: 50px;
   background-color: rgba(248, 247, 244, 0.2);
@@ -1415,7 +1452,7 @@ input[type="radio"].visually-hidden {
 .icon-down {
   position: absolute;
   right: 4px;
-  top: 51px;
+  top: 33px;
   z-index: 1;
 
   box-sizing: border-box;
@@ -1434,13 +1471,12 @@ input[type="radio"].visually-hidden {
 
 
 .range {
-  margin-top: 6px;
   padding: 17px 21px;
   width: 178px;
 }
 
 .filters__btn {
-  align-self: flex-end;
+  align-self: center;
   width: 141px;
   height: 36px;
 
@@ -1471,7 +1507,7 @@ input[type="radio"].visually-hidden {
   justify-content: flex-end;
 
   margin-right: -10px;
-  margin-bottom: 29px;
+  margin-bottom: 33px;
 
   text-align: right;
 }
@@ -1661,7 +1697,9 @@ input[type="radio"].visually-hidden {
 .header__item:active .menu__list,
 .header__item:focus .menu__list,
 .header__user-item:hover .signin,
-.header__user-item:hover .cart,
 .header__user-item:hover .search__box {
   display: block;
+}
+.header__user-item:hover .cart {
+  display: flex;
 }
