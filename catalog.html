@@ -11,10 +11,10 @@
 
   <header class="header">
     <div class="container">
-      <div class="header__top flexbox">
+      <div class="header__top">
         <div class="logo"><a href="index.html" class="logo__link"><img src="img/logo.svg" width="154" height="64" alt="Логотип магазина мороженого «Глейси»"></a></div>
         <nav class="header__nav">
-          <ul class="header__list flexbox">
+          <ul class="header__list">
             <li class="header__item">
               <a href="catalog.html" class="header__link header__link--current">Каталог</a>
               <ul class="menu__list ">
@@ -82,13 +82,13 @@
                   <td class="cell" colspan="6">Итого: 750 руб.</td>
                 </tr>
               </table>
-                <a href="#" class="signin__btn btn cart__btn">Оформить заказ</a>
+              <a href="#" class="cart__btn btn">Оформить заказ</a>
             </div>
           </li>
         </ul>
       </div>
-      <div class="header__bottom flexbox">
-        <ul class="breadcrumbs flexbox">
+      <div class="header__bottom">
+        <ul class="breadcrumbs">
           <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="index.html">Главная</a></li>
           <li class="breadcrumbs__item"><a class="breadcrumbs__link crumb" href="index.html">»</a></li>
           <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="catalog.html">Каталог</a></li>
@@ -108,7 +108,7 @@
       <section class="filters">
         <h2 class="visually-hidden">Фильтры выбора</h2>
         <form class="filters__form" action="https://echo.htmlacademy.ru" method="get" oninput="priceoutput.value=pricechoice.value">
-          <div class="filters__block flexbox">
+          <div class="filters__block">
             <fieldset class="filters__group">
               <h3 class="filters__title">Сортировка:</h3>
               <select class="filters__sorting" name="sorting">
@@ -117,10 +117,11 @@
                 <option>сначала дорогие</option>
                 <option>по жирности</option>
               </select>
+              <svg class="icon-down" xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10"><path fill="#ffffff" d="M5.5 10L0 0h11"></path></svg>
             </fieldset>
             <fieldset class="filters__group">
               <div class="price-controls">
-                  <label class="min-price">Цена <input class="min__input" name="min-price" type="text" value="0">руб. - </label>
+                  <label class="min-price">Цена <input class="min__input" name="min-price" type="text" value="100">руб. - </label>
                   <label class="max-price"><input class="max__input" name="max-price" type="text" value="500">руб.</label>
               </div>
               <div class="range">
@@ -135,18 +136,18 @@
             </fieldset>
             <fieldset class="filters__group">
               <h3 class="filters__title">Жирность:</h3>
-              <ul class="filters__list flexbox">
-                <li class="filters__item"><input class="filters__input filters__radio visually-hidden" type="radio" name="fatness" id="fatness-1" value="0"><label for="fatness-1" class="radio__label">0%</label></li>
-                <li class="filters__item"><input class="filters__input filters__radio visually-hidden" type="radio" name="fatness" id="fatness-2" value="less 10" checked><label for="fatness-2" class="radio__label">до 10%</label></li>
-                <li class="filters__item"><input class="filters__input filters__radio visually-hidden" type="radio" name="fatness" id="fatness-3" value="less 30"><label for="fatness-3" class="radio__label">до 30%</label></li>
-                <li class="filters__item"><input class="filters__input filters__radio visually-hidden" type="radio" name="fatness" id="fatness-4" value="over 30"><label for="fatness-4" class="radio__label">выше 30%</label></li>
+              <ul class="filters__list">
+                <li class="filters__item filters__radio"><input class="filters__input filters__radio visually-hidden" type="radio" name="fatness" id="fatness-1" value="0"><label for="fatness-1" class="radio__label">0%</label></li>
+                <li class="filters__item filters__radio"><input class="filters__input filters__radio visually-hidden" type="radio" name="fatness" id="fatness-2" value="less 10" checked><label for="fatness-2" class="radio__label">до 10%</label></li>
+                <li class="filters__item filters__radio"><input class="filters__input filters__radio visually-hidden" type="radio" name="fatness" id="fatness-3" value="less 30"><label for="fatness-3" class="radio__label">до 30%</label></li>
+                <li class="filters__item filters__radio"><input class="filters__input filters__radio visually-hidden" type="radio" name="fatness" id="fatness-4" value="over 30"><label for="fatness-4" class="radio__label">выше 30%</label></li>
               </ul>
             </fieldset>
           </div>
-          <div class="filters__block flexbox">
+          <div class="filters__block">
             <fieldset class="filters__group">
               <h3 class="filters__title">Наполнители:</h3>
-              <ul class="filters__list flexbox">
+              <ul class="filters__list">
                 <li class="filters__item"><span class="checkbox__icon"></span><input class="filters__input filters__checkbox visually-hidden" type="checkbox" name="chocolate" id="filler-1" checked><label class="checkbox__label" for="filler-1">шоколадные</label></li>
                 <li class="filters__item"><span class="checkbox__icon"></span><input class="filters__input filters__checkbox visually-hidden" type="checkbox" name="sugar" id="filler-2" checked><label class="checkbox__label" for="filler-2">сахарные присыпки</label></li>
                 <li class="filters__item"><span class="checkbox__icon"></span><input class="filters__input filters__checkbox visually-hidden" type="checkbox" name="fruits" id="filler-3"><label class="checkbox__label" for="filler-3">фрукты</label></li>
@@ -237,13 +238,13 @@
         </ul>
       </section>
       <ul class="paginator">
-        <li class="paginator-item paginator-item--inactive"><a class="paginator__link" href="#"><</a></li>
+        <li class="paginator-item paginator-item--inactive"><a class="paginator__link" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 8 12"><path fill="#C1C6CE" d="M7.237 5.642L1.729.133a.506.506 0 1 0-.716.716L6.163 6l-5.151 5.15a.507.507 0 0 0 .716.717l5.509-5.509a.504.504 0 0 0 0-.716z"></path></svg></a></li>
         <li class="paginator-item"><a class="paginator__link paginator__link--current" href="#">1</a></li>
         <li class="paginator-item"><a href="#" class="paginator__link">2</a></li>
         <li class="paginator-item"><a href="#" class="paginator__link">3</a></li>
         <li class="paginator-item"><a href="#" class="paginator__link">4</a></li>
         <li class="paginator-item"><a href="#" class="paginator__link">5</a></li>
-        <li class="paginator-item"><a href="#" class="paginator__link">></a></li>
+        <li class="paginator-item"><a href="#" class="paginator__link"><svg xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 8 12"><path fill="#fff" d="M7.237 5.642L1.729.133a.506.506 0 1 0-.716.716L6.163 6l-5.151 5.15a.507.507 0 0 0 .716.717l5.509-5.509a.504.504 0 0 0 0-.716z"></path></svg></a></li>
       </ul>
     </div>
   </main>
