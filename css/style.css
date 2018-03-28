@@ -4,7 +4,7 @@ body {
 
   font-size: 16px;
   line-height: 18px;
-  font-family: 'Roboto', 'Arial', sans-serif;
+  font-family: "Roboto", "Arial", sans-serif;
   font-weight: bold;
   color: #ffffff;
   background-color: #849d8f;
@@ -20,29 +20,14 @@ img {
 }
 
 .site-wrapper {
-  min-width: 1254px;
+  min-width: 1200px;
 
   background-color: #849d8f;
-  background-image: url("../img/slide1.png");
+  background-image: url("../img/slider1.png");
   background-repeat: no-repeat;
   background-position: top center;
 
   transition: background-image 0.5s ease, background-color 0.5s ease;
-}
-
-.site-wrapper::before,
-.site-wrapper::after {
-  content: "";
-
-  visibility: hidden;
-}
-
-.site-wrapper::before {
-  background-image: url("img/slider-item2.png");
-}
-
-.site-wrapper::after {
-  background-image: url("img/slider-item3.png");
 }
 
 .visually-hidden:not(:focus):not(:active),
@@ -139,7 +124,7 @@ input[type="radio"].visually-hidden {
   font-weight: bold;
 }
 
-.container {
+.container:not(.map) {
   width: 1146px;
   margin: 0 auto;
   padding: 0 27px;
@@ -191,9 +176,15 @@ input[type="radio"].visually-hidden {
   border-color: transparent;
 }
 
-.header__link:hover,
-.header__link:focus,
-.header__link:active {
+.menu__item:hover .menu__list {
+  display: block;
+
+}
+
+.header__link:not(.header__link--current):hover,
+.header__link:not(.header__link--current):active,
+.header__link:not(.header__link--current):focus,
+.header__item:hover > a {
   padding: 7px 14px;
 
   color: #333333;
@@ -227,8 +218,7 @@ input[type="radio"].visually-hidden {
 .header__search::before,
 .cart--empty::before,
 .header__cart--red::before,
-.header__entrance--hover::before,
-.header__loupe--hover::before {
+.header__entrance--hover::before {
   content: "";
   position: absolute;
   top: 6px;
@@ -238,14 +228,15 @@ input[type="radio"].visually-hidden {
   background-position: 0 0;
 }
 
-.header__search::before {
-  left: 20px;
-  top: 8px;
+.icon-loup {
+  position: absolute;
+  right: 7px;
+  top: 9px;
+  z-index: 1;
+}
 
-  width: 17px;
-  height: 17px;
-
-  background-image: url("../img/loupe.svg");
+.header__loupe--hover:hover + .icon-loup {
+  filter: invert(1);
 }
 
 .header__entrance::before {
@@ -300,7 +291,8 @@ input[type="radio"].visually-hidden {
 }
 
 .header__user-link:hover,
-.header__user-link:focus {
+.header__user-link:focus,
+.header__user-item:hover > a {
   font-size: 14px;
   line-height: 16px;
   font-weight: 400px;
@@ -309,25 +301,15 @@ input[type="radio"].visually-hidden {
   background-color: #f8f7f4;
 }
 
-.header__loupe--hover:hover::before {
-  top: 8px;
-  left: 19px;
-
-  width: 17px;
-  height: 17px;
-
-  background-image: url("../img/loupe-black.svg");
-}
-
 .header__entrance--hover:hover::before {
   width: 21px;
   height: 19px;
 
-  background-image: url("../img/entrance.svg");
+  background: url("../img/entrance.svg") no-repeat center;
 }
 
 .cart--empty:hover::before {
-  background-image: url("../img/basket-bl.svg");
+  background: url("../img/basket-bl.svg") no-repeat center;
 }
 
 .header__bottom {
@@ -463,7 +445,9 @@ input[type="radio"].visually-hidden {
 
 .signin__input::placeholder,
 .search__input::placeholder,
-.newsletter__input::placeholder {
+.newsletter__input::placeholder,
+.feedback__field::placeholder,
+.feedback__text::placeholder {
   color: #999999;
   font-weight: normal;
 }
@@ -474,6 +458,23 @@ input[type="radio"].visually-hidden {
   padding: 9px;
 
   border: 2px solid #9a9a9a;
+}
+
+.feedback__field:hover,
+.feedback__text:hover {
+  padding: 11px;
+  border: 2px solid #9a9a9a;
+}
+
+.feedback__field:focus,
+.feedback__text:focus {
+  padding: 11px;
+
+  color: #323232;
+  font-weight: bold;
+
+  outline: none;
+  border: 2px solid #2e88e4;
 }
 
 .signin__input:focus,
@@ -543,7 +544,7 @@ input[type="radio"].visually-hidden {
   vertical-align: center;
 }
 
-.cell:not(cell__item) {
+.cell:not(.cell__item) {
   word-wrap: normal;
 }
 
@@ -575,6 +576,8 @@ input[type="radio"].visually-hidden {
   border-bottom: 1px solid #cacac7;
 }
 
+
+
 .cell--grey {
   padding-right: 28px;
 
@@ -593,6 +596,10 @@ input[type="radio"].visually-hidden {
   line-height: 24px;
 }
 
+.slide {
+  display: none;
+}
+
 .slider {
   position: relative;
 
@@ -607,10 +614,6 @@ input[type="radio"].visually-hidden {
   padding: 0;
 
   list-style: none;
-}
-
-.slide {
-  display: none;
 }
 
 .slider-title {
@@ -695,17 +698,17 @@ input[type="radio"].visually-hidden {
 
 #product-1:checked ~ .site-wrapper {
   background-color: #849d8f;
-  background-image: url("../img/slide1.png");
+  background-image: url("../img/slider1.png");
 }
 
 #product-2:checked ~ .site-wrapper {
   background-color: #8996a6;
-  background-image: url("../img/slide2.png");
+  background-image: url("../img/slider2.png");
 }
 
 #product-3:checked ~ .site-wrapper {
   background-color: #9d8b84;
-  background-image: url("../img/slide3.png");
+  background-image: url("../img/slider3.png");
 }
 
 #product-1:checked ~ .site-wrapper #slide1,
@@ -790,7 +793,6 @@ input[type="radio"].visually-hidden {
 
 .catalog__item {
   position: relative;
-
   width: 267px;
   margin-bottom: 35px;
 
@@ -800,7 +802,7 @@ input[type="radio"].visually-hidden {
 .catalog__item::after {
   position: absolute;
   z-index: 1;
-  content: '';
+  content: "";
   left: -13px;
   top: -8px;
 
@@ -1033,7 +1035,6 @@ input[type="radio"].visually-hidden {
 .map__bg {
   position: relative;
 
-  width: 1200px;
   margin: 0 auto;
 }
 
@@ -1088,6 +1089,7 @@ input[type="radio"].visually-hidden {
   position: absolute;
   bottom: -52px;
   left: 35px;
+
   z-index: 2;
 
   padding-left: 15px;
@@ -1196,6 +1198,8 @@ input[type="radio"].visually-hidden {
   height: 129px;
   padding: 12px;
   margin-bottom: 25px;
+
+  resize: none;
 }
 
 .feedback--close {
@@ -1483,7 +1487,6 @@ input[type="radio"].visually-hidden {
   filter: invert(1);
 }
 
-
 .range {
   padding: 16px 21px;
   width: 178px;
@@ -1553,6 +1556,10 @@ input[type="radio"].visually-hidden {
   color: #323232;
 
   background-color: #ffffff;
+}
+
+.paginator__link:active .next {
+  filter: invert(1);
 }
 
 .paginator-item--inactive {
@@ -1689,7 +1696,7 @@ input[type="radio"].visually-hidden {
   width: 15px;
   height: 13px;
 
-  background: url("../img/heart.svg") no-repeat center;
+  background: url("../img/heart.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
 }

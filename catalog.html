@@ -31,7 +31,7 @@
         </nav>
         <ul class="header__user-list">
           <li class="header__user-item header__search">
-            <a href="#" class="header__user-link header__loupe--hover"><span class="visually-hidden">Поиск</span></a>
+            <a href="#" class="header__user-link header__loupe--hover"><svg class="icon-loup" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="17" height="17" viewBox="0 0 17 17"><path fill="#fff" d="M16.958 15.527L11.75 10.32A6.455 6.455 0 0 0 13 6.5 6.5 6.5 0 1 0 6.5 13a6.465 6.465 0 0 0 3.839-1.263l5.205 5.204 1.414-1.414zM6.5 11C4.019 11 2 8.981 2 6.5S4.019 2 6.5 2 11 4.019 11 6.5 8.981 11 6.5 11z"/></svg><span class="visually-hidden">Поиск</span></a>
             <div class="search__box">
               <form class="search__form" action="https://echo.htmlacademy.ru" method="get">
                 <label class="visually-hidden" for="search-field">Поле поиска</label><input class="search__input" type="search" name="search" id="search-field" placeholder="Что ищем?"><button class="visually-hidden" type="submit">Найти</button>
@@ -140,7 +140,7 @@
                 <li class="filters__item filters__radio"><input class="filters__input filters__radio visually-hidden" type="radio" name="fatness" id="fatness-1" value="0"><label for="fatness-1" class="radio__label">0%</label></li>
                 <li class="filters__item filters__radio"><input class="filters__input filters__radio visually-hidden" type="radio" name="fatness" id="fatness-2" value="less 10" checked><label for="fatness-2" class="radio__label">до 10%</label></li>
                 <li class="filters__item filters__radio"><input class="filters__input filters__radio visually-hidden" type="radio" name="fatness" id="fatness-3" value="less 30"><label for="fatness-3" class="radio__label">до 30%</label></li>
-                <li class="filters__item filters__radio"><input class="filters__input filters__radio visually-hidden" type="radio" name="fatness" id="fatness-4" value="over 30" disabled><label for="fatness-4" class="radio__label">выше 30%</label></li>
+                <li class="filters__item filters__radio"><input class="filters__input filters__radio visually-hidden" type="radio" name="fatness" id="fatness-4" value="over 30"><label for="fatness-4" class="radio__label">выше 30%</label></li>
               </ul>
             </fieldset>
           </div>
@@ -152,7 +152,7 @@
                 <li class="filters__item"><span class="checkbox__icon"></span><input class="filters__input filters__checkbox visually-hidden" type="checkbox" name="sugar" id="filler-2" checked><label class="checkbox__label" for="filler-2">сахарные присыпки</label></li>
                 <li class="filters__item"><span class="checkbox__icon"></span><input class="filters__input filters__checkbox visually-hidden" type="checkbox" name="fruits" id="filler-3"><label class="checkbox__label" for="filler-3">фрукты</label></li>
                 <li class="filters__item"><span class="checkbox__icon"></span><input class="filters__input filters__checkbox visually-hidden" type="checkbox" name="syrup" id="filler-4"><label class="checkbox__label" for="filler-4">сиропы</label></li>
-                <li class="filters__item"><span class="checkbox__icon"></span><input class="filters__input filters__checkbox visually-hidden" type="checkbox" name="jam" id="filler-5" disabled><label class="checkbox__label" for="filler-5">джемы</label></li>
+                <li class="filters__item"><span class="checkbox__icon"></span><input class="filters__input filters__checkbox visually-hidden" type="checkbox" name="jam" id="filler-5"><label class="checkbox__label" for="filler-5">джемы</label></li>
               </ul>
             </fieldset>
             <button class="filters__btn" type="submit">Применить</button>
@@ -238,13 +238,13 @@
         </ul>
       </section>
       <ul class="paginator">
-        <li class="paginator-item paginator-item--inactive"><a class="paginator__link" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 8 12"><path fill="#C1C6CE" d="M7.237 5.642L1.729.133a.506.506 0 1 0-.716.716L6.163 6l-5.151 5.15a.507.507 0 0 0 .716.717l5.509-5.509a.504.504 0 0 0 0-.716z"></path></svg></a></li>
+        <li class="paginator-item paginator-item--inactive"><a class="paginator__link" href="#"><svg class="previous" xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 8 12"><path fill="#C1C6CE" d="M7.237 5.642L1.729.133a.506.506 0 1 0-.716.716L6.163 6l-5.151 5.15a.507.507 0 0 0 .716.717l5.509-5.509a.504.504 0 0 0 0-.716z"></path></svg></a></li>
         <li class="paginator-item"><a class="paginator__link paginator__link--current" href="#">1</a></li>
         <li class="paginator-item"><a href="#" class="paginator__link">2</a></li>
         <li class="paginator-item"><a href="#" class="paginator__link">3</a></li>
         <li class="paginator-item"><a href="#" class="paginator__link">4</a></li>
         <li class="paginator-item"><a href="#" class="paginator__link">5</a></li>
-        <li class="paginator-item"><a href="#" class="paginator__link"><svg xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 8 12"><path fill="#fff" d="M7.237 5.642L1.729.133a.506.506 0 1 0-.716.716L6.163 6l-5.151 5.15a.507.507 0 0 0 .716.717l5.509-5.509a.504.504 0 0 0 0-.716z"></path></svg></a></li>
+        <li class="paginator-item"><a href="#" class="paginator__link"><svg class="next" xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 8 12"><path fill="#fff" d="M7.237 5.642L1.729.133a.506.506 0 1 0-.716.716L6.163 6l-5.151 5.15a.507.507 0 0 0 .716.717l5.509-5.509a.504.504 0 0 0 0-.716z"></path></svg></a></li>
       </ul>
     </div>
   </main>
