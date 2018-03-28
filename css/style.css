@@ -309,7 +309,7 @@ input[type="radio"].visually-hidden {
   background-color: #f8f7f4;
 }
 
-.header__search::before +.header__loupe--hover::before {
+.header__loupe--hover:hover::before {
   top: 8px;
   left: 19px;
 
