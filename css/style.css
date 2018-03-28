@@ -239,7 +239,8 @@ input[type="radio"].visually-hidden {
 }
 
 .header__search::before {
-  left: 18px;
+  left: 20px;
+  top: 8px;
 
   width: 17px;
   height: 17px;
@@ -269,7 +270,7 @@ input[type="radio"].visually-hidden {
 }
 
 .header__user-link {
-  padding: 7px 15px 7px 43px;
+  padding: 8px 15px 8px 43px;
   margin-left: 12px;
   margin-bottom: 10px;
 
@@ -308,8 +309,8 @@ input[type="radio"].visually-hidden {
   background-color: #f8f7f4;
 }
 
-.header__loupe--hover:hover::before {
-  top: 7px;
+.header__search::before +.header__loupe--hover::before {
+  top: 8px;
   left: 19px;
 
   width: 17px;
@@ -999,8 +1000,7 @@ input[type="radio"].visually-hidden {
 }
 
 .newsletter__bg {
-  box-sizing: border-box;
-  margin: 4px 5px;
+  flex-grow: 1;
   padding: 30px 20px;
 
   background-color: #f8f7f4;
@@ -1055,7 +1055,7 @@ input[type="radio"].visually-hidden {
 
 .map__text {
   margin: 0;
-  margin-bottom: 26px;
+  margin-bottom: 23px;
 
   font-size: 14px;
   line-height: 20px;
@@ -1241,7 +1241,7 @@ input[type="radio"].visually-hidden {
 }
 
 .filters {
-  margin-bottom: 22px;
+  margin-bottom: 29px;
 }
 
 .filter__title {
@@ -1257,7 +1257,7 @@ input[type="radio"].visually-hidden {
 .price-controls {
   margin: 0;
   margin-left: 15px;
-  margin-bottom: 2px;
+  margin-bottom: 6px;
 
   font-size: 14px;
   line-height: 16px;
@@ -1293,7 +1293,6 @@ input[type="radio"].visually-hidden {
   display: block;
 
   cursor: pointer;
-  user-select: none;
 }
 
 .filters__radio + .radio__label::before {
@@ -1333,6 +1332,8 @@ input[type="radio"].visually-hidden {
 
   border: 2px solid rgba(255, 255, 255, 0.8);
   border-radius: 3px;
+
+  cursor: pointer;
 }
 
 .radio__label:hover::before,
@@ -1365,6 +1366,16 @@ input[type="radio"].visually-hidden {
 
 .filters__checkbox:checked + .checkbox__label:hover::after {
   opacity: 1;
+}
+
+.filters__radio:disabled + .radio__label::before,
+.filters__radio:disabled + .radio__label::after,
+.filters__checkbox:disabled + .checkbox__label::before,
+.filters__checkbox:disabled + .checkbox__label::after {
+  opacity: 0.4;
+
+  pointer-events: none;
+  cursor: default;
 }
 
 .range-controls {
@@ -1435,8 +1446,8 @@ input[type="radio"].visually-hidden {
 .filters__list,
 .filters__sorting,
 .range {
-  padding: 10px 0px 10px 12px;
-  margin-bottom: 16px;
+  padding: 9px 0px 9px 12px;
+  margin-bottom: 11px;
 
   border-radius: 50px;
   background-color: rgba(248, 247, 244, 0.2);
@@ -1444,15 +1455,18 @@ input[type="radio"].visually-hidden {
 
 .filters__sorting {
   padding: 9px 15px;
+  padding-right: 32px;
+
   color: #ffffff;
 
   border: none;
+  -webkit-appearance: none;
 }
 
 .icon-down {
   position: absolute;
-  right: 4px;
-  top: 33px;
+  right: 13px;
+  top: 34px;
   z-index: 1;
 
   box-sizing: border-box;
@@ -1465,13 +1479,13 @@ input[type="radio"].visually-hidden {
   color: #323232;
 }
 
-.filters__sorting:hover .icon-down { /* не работает правило????*/
+.filters__sorting:hover + .icon-down {
   filter: invert(1);
 }
 
 
 .range {
-  padding: 17px 21px;
+  padding: 16px 21px;
   width: 178px;
 }
 
@@ -1479,6 +1493,7 @@ input[type="radio"].visually-hidden {
   align-self: center;
   width: 141px;
   height: 36px;
+  margin-bottom: -9px;
 
   font: inherit;
   color: #ffffff;
@@ -1487,6 +1502,8 @@ input[type="radio"].visually-hidden {
   background-color: rgba(255, 255, 255, 0.2);
   border: 2px solid #ffffff;
   border-radius: 50px;
+
+  cursor: pointer;
 }
 
 .filters__btn:hover {
@@ -1555,7 +1572,7 @@ input[type="radio"].visually-hidden {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 0px 25px 0px;
+  padding: 19px 0px 30px 0px;
 
   border-top: 1px solid #ffffff;
 }
@@ -1564,6 +1581,10 @@ input[type="radio"].visually-hidden {
   font-size: 13px;
   line-height: 16px;
   font-weight: normal;
+}
+
+.footer__menu-item:first-child {
+    margin-bottom: 8px;
 }
 
 .footer__text,
@@ -1643,6 +1664,7 @@ input[type="radio"].visually-hidden {
 
 .menu-list__wrapper {
   display: flex;
+  align-self: flex-end;
 }
 
 .footer__menu-list {
@@ -1662,7 +1684,7 @@ input[type="radio"].visually-hidden {
 
   position: absolute;
   top: 2px;
-  left: -18px;
+  left: -22px;
 
   width: 15px;
   height: 13px;
