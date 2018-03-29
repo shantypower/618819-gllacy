@@ -1057,6 +1057,7 @@ input[type="radio"].visually-hidden {
   padding-top: 24px;
 
   background: url("../img/strawberry-bg.jpg") no-repeat center;
+  background-color: #ffffff;
 }
 
 .newsletter__item:last-child {
@@ -1064,6 +1065,7 @@ input[type="radio"].visually-hidden {
   width: 550px;
 
   background: url("../img/post-bg.jpg") no-repeat center;
+  background-color: #f8f7f4;
 }
 
 .newsletter__bg {
@@ -1613,6 +1615,13 @@ input[type="radio"].visually-hidden {
   cursor: default;
 }
 
+.radio__label,
+.radio__label,
+.checkbox__label,
+.checkbox__label {
+  outline: inherit;
+}
+
 .range-controls {
   position: relative;
 }
@@ -1898,6 +1907,7 @@ input[type="radio"].visually-hidden {
   background-position: 0 0;
   border: 2px solid rgba(255, 255, 255, 0.5);
   border-radius: 50%;
+  outline: inherit;
   opacity: 0.8;
 }
 
