@@ -25,7 +25,7 @@ img {
   background-color: #849d8f;
   background-image: url("../img/slider1.png");
   background-repeat: no-repeat;
-  background-position: 311px -9px;
+  background-position: center -9px;
 
   -webkit-transition: background-image 0.5s ease, background-color 0.5s ease;
 
