@@ -1244,12 +1244,17 @@ input[type="radio"].visually-hidden {
 
 .map__text {
   margin: 0;
-  margin-bottom: 23px;
+
+  width: 156px;
 
   font-size: 14px;
   line-height: 20px;
   font-weight: normal;
   color: #323232;
+}
+
+.map__text.map__phone {
+  width: 172px;
 }
 
 .offers__btn {
@@ -1321,6 +1326,7 @@ input[type="radio"].visually-hidden {
 
 .map__text--bold {
   margin: 0;
+  margin-bottom: 20px;
 
   font-size: 18px;
   line-height: 24px;
