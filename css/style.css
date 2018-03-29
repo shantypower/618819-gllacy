@@ -168,14 +168,6 @@ input[type="radio"].visually-hidden {
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-.header__link--current {
-  padding: 7px 14px;
-
-  background-color: #d07058;
-  border-radius: 50px;
-  border-color: transparent;
-}
-
 .menu__item:hover .menu__list {
   display: block;
 
@@ -191,6 +183,17 @@ input[type="radio"].visually-hidden {
 
   background-color: #f7f6f3;
   border-radius: 50px;
+}
+
+.header__link--current,
+.header__item:hover > .header__link--current {
+  padding: 7px 14px;
+
+  color: #ffffff;
+
+  background-color: #d07058;
+  border-radius: 50px;
+  border-color: transparent;
 }
 
 .header__link:active {
@@ -214,11 +217,7 @@ input[type="radio"].visually-hidden {
   align-items: center;
 }
 
-.header__entrance::before,
-.header__search::before,
-.cart--empty::before,
-.header__cart--red::before,
-.header__entrance--hover::before {
+.header__cart--red::before {
   content: "";
   position: absolute;
   top: 6px;
@@ -235,22 +234,18 @@ input[type="radio"].visually-hidden {
   z-index: 1;
 }
 
-.header__loupe--hover:hover + .icon-loup {
-  filter: invert(1);
+.icon-entrance {
+  position: absolute;
+  top: 6px;
+  left: 26px;
+  z-index: 1;
 }
 
-.header__entrance::before {
-  width: 21px;
-  height: 19px;
-
-  background-image: url("../img/entrance-white.svg");
-}
-
-.cart--empty::before {
-  width: 21px;
-  height: 20px;
-
-  background-image: url("../img/basket.svg");
+.icon-cart {
+  position: absolute;
+  top: 6px;
+  left: 26px;
+  z-index: 1;
 }
 
 .header__cart--red::before {
@@ -273,6 +268,7 @@ input[type="radio"].visually-hidden {
 }
 
 .cart--empty {
+  padding-left: 42px;
   padding-right: 34px;
 }
 
@@ -301,15 +297,8 @@ input[type="radio"].visually-hidden {
   background-color: #f8f7f4;
 }
 
-.header__entrance--hover:hover::before {
-  width: 21px;
-  height: 19px;
-
-  background: url("../img/entrance.svg") no-repeat center;
-}
-
-.cart--empty:hover::before {
-  background: url("../img/basket-bl.svg") no-repeat center;
+.header__user-item:hover > a > svg {
+  filter: invert(1);
 }
 
 .header__bottom {
@@ -376,16 +365,16 @@ input[type="radio"].visually-hidden {
   line-height: 16px;
 }
 
-.menu__item:not(.menu__title):hover {
-  background-color: #fbded7;
+.item--current {
+  background-color: #d07058;
 }
 
 .menu__item:active {
   background-color: #f6b5a5;
 }
 
-.item--current {
-  background-color: #d07058;
+.menu__item:not(.menu__title):hover {
+  background-color: #fbded7;
 }
 
 .menu__title {
