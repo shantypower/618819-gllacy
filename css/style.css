@@ -783,6 +783,7 @@ input[type="radio"].visually-hidden {
 .catalog__item {
   position: relative;
   width: 267px;
+  min-height: 250px;
   margin-bottom: 35px;
 
   text-align: center;
@@ -796,7 +797,7 @@ input[type="radio"].visually-hidden {
   top: -8px;
 
   width: 293px;
-  height: 405px;
+  min-height: 405px;
 
   background-color: rgba(255, 255, 255, 0.2);
   border-radius: 5px;
@@ -1076,6 +1077,7 @@ input[type="radio"].visually-hidden {
 
 .catalog__btn {
   position: absolute;
+  display: block;
   bottom: -52px;
   left: 35px;
 
@@ -1540,15 +1542,12 @@ input[type="radio"].visually-hidden {
 }
 
 .paginator__link--current,
+.paginator__link--current.paginator__link:hover,
 .paginator__link:focus,
 .paginator__link:active {
   color: #323232;
 
   background-color: #ffffff;
-}
-
-.paginator__link:active .next {
-  filter: invert(1);
 }
 
 .paginator-item--inactive {
@@ -1558,6 +1557,10 @@ input[type="radio"].visually-hidden {
 
   pointer-events: none;
   cursor: default;
+}
+
+.paginator__link:active .next {
+  filter: invert(1);
 }
 
 .paginator-item--inactive svg {
