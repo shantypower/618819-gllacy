@@ -177,7 +177,6 @@ input[type="radio"].visually-hidden {
 
 .menu__item:hover .menu__list {
   display: block;
-
 }
 
 .header__link:not(.header__link--current):hover,
@@ -310,7 +309,10 @@ input[type="radio"].visually-hidden {
 
 .header__user-item:hover #icon-loup,
 .header__user-item:hover #icon-entrance,
-.header__user-item:hover #icon-cart {
+.header__user-item:hover #icon-cart,
+.header__user-item:focus #icon-loup,
+.header__user-item:focus #icon-entrance,
+.header__user-item:focus #icon-cart {
   fill: #323232;
 }
 
@@ -372,13 +374,14 @@ input[type="radio"].visually-hidden {
   z-index: 10;
 
   padding: 0px;
-  width: 143px;
+  min-width: 143px;
 
   background-color: #f8f7f4;
   border-radius: 8px;
+  overflow: hidden;
 }
 
-.menu__link {
+.menu__item {
   display: block;
   padding: 8px 20px;
 
@@ -387,8 +390,25 @@ input[type="radio"].visually-hidden {
   line-height: 16px;
 }
 
-.menu__item:first-child {
-  border-bottom: 1px solid #d1d0ce;
+.menu__item--underline::after {
+  content: "";
+  position: absolute;
+  right: 6px;
+  top: 31px;
+  left: 6px;
+  height: 1px;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.menu__link {
+  color: #323232;
+}
+
+.menu__new {
+  font-weight: 700;
+}
+
+.menu__item:first-of-type {
   border-radius: 8px 8px 0 0;
 }
 
@@ -396,30 +416,16 @@ input[type="radio"].visually-hidden {
   border-radius: 0 0 8px 8px;
 }
 
-
 .item--current {
   background-color: #d07058;
 }
 
-.menu__link:not(.menu__link--curent):hover {
+.menu__item:not(.item--current):hover {
   background-color: #fbded7;
 }
 
-.menu__link--curent:hover {
-  background-color: #d07058;
-}
-
-.menu__link:active {
+.menu__item:active {
   background-color: #f6b5a5;
-}
-
-.menu__title {
-  font-weight: bold;
-}
-
-.menu__title,
-.menu__link {
-  color: #323232;
 }
 
 .search__box {
@@ -748,18 +754,19 @@ input[type="radio"].visually-hidden {
   padding: 20px;
   padding-top: 15px;
 
-  background-size: cover;
   border-radius: 15px;
 }
 
 .offers__item:first-child {
   background: url("../img/raspberry-bg.jpg") no-repeat center;
   background-color: #590b19;
+  background-size: cover;
 }
 
 .offers__item:last-child {
   background: url("../img/chocolate-bg.jpg") no-repeat center;
   background-color: #3f2519;
+  background-size: cover;
 }
 
 .offers__title {
@@ -831,14 +838,16 @@ input[type="radio"].visually-hidden {
   top: -5px;
   left: -12px;
 
-  display: none;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  visibility: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
 
   width: 293px;
   min-height: 405px;
@@ -850,9 +859,7 @@ input[type="radio"].visually-hidden {
 }
 
 .catalog__item:hover .catalog__overlay {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+ visibility: visible;
 }
 
 .catalog__hit::before {
@@ -1053,6 +1060,7 @@ input[type="radio"].visually-hidden {
   padding: 30px 22px 36px 22px;
 
   background-color: #f8f7f4;
+  background-size: cover;
   border-radius: 15px;
 }
 
@@ -1221,7 +1229,7 @@ input[type="radio"].visually-hidden {
           justify-content: space-between;
   padding: 30px 25px;
   width:252px;
-  height:245px;
+  min-height:245px;
 
   background-color: #ffffff;
   border-radius: 15px;
@@ -1268,9 +1276,8 @@ input[type="radio"].visually-hidden {
   z-index: 2;
   padding-left: 15px;
   padding-right: 15px;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
   margin-bottom: 21px;
 
   font-size: 18px;
@@ -1561,11 +1568,14 @@ input[type="radio"].visually-hidden {
 }
 
 .radio__label:hover::before,
-.checkbox__label:hover::before {
+.checkbox__label:hover::before,
+.filters__input:focus + .radio__label::before,
+.filters__input:focus + .checkbox__label::before {
   border-color: #ffffff;
 }
 
-.filters__radio:checked + .radio__label:hover::after {
+.filters__radio:checked + .radio__label:hover::after,
+.filters__input:focus + .radio__label::after {
   background-color: #ffffff;
 }
 
@@ -1588,7 +1598,8 @@ input[type="radio"].visually-hidden {
   opacity: 0.8;
 }
 
-.filters__checkbox:checked + .checkbox__label:hover::after {
+.filters__checkbox:checked + .checkbox__label:hover::after,
+.filters__input:focus + .checkbox__label::after {
   opacity: 1;
   cursor: pointer;
 }
@@ -1611,13 +1622,6 @@ input[type="radio"].visually-hidden {
 .filters__input:disabled + .radio__label:hover::before,
 .filters__input:disabled + .radio__label:hover::after {
  opacity: 0.35;
-}
-
-.radio__label:focus::before,
-.radio__label:focus::after,
-.checkbox__label:focus::before,
-.checkbox__label:focus::after {
-  border-color: skyblue;
 }
 
 .range-controls {
@@ -1722,7 +1726,7 @@ input[type="radio"].visually-hidden {
 .icon-down {
   position: absolute;
   right: 13px;
-  top: 34px;
+  top: 35px;
   z-index: 1;
 
   -webkit-box-sizing: border-box;
@@ -1738,7 +1742,7 @@ input[type="radio"].visually-hidden {
 }
 
 
-.filters__sorting:hover + #icon-down {
+.filters__group:hover #icon-down {
   fill: #323232;
 }
 
@@ -1751,7 +1755,7 @@ input[type="radio"].visually-hidden {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
-  width: 144px;
+  min-width: 144px;
   height: 36px;
   margin-left: 6px;
   margin-bottom: -9px;
@@ -1894,6 +1898,8 @@ input[type="radio"].visually-hidden {
 }
 
 .social-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   width: 32px;
   height: 32px;
