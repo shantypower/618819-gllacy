@@ -798,10 +798,13 @@ input[type="radio"].visually-hidden {
 }
 
 .offers,
-.newsletter,
 .slider,
 .catalog:not(.catalog__popular) {
   margin-bottom: 42px;
+}
+
+.newsletter {
+  margin-bottom: 38px;
 }
 
 .catalog__list {
@@ -1216,7 +1219,7 @@ input[type="radio"].visually-hidden {
   z-index: 1;
 
   position: absolute;
-  width: 100vw;
+  width: 100%;
   height: 430px;
 }
 
@@ -1838,7 +1841,7 @@ input[type="radio"].visually-hidden {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 14px 0px 30px 0px;
+  padding: 18px 0px 30px 0px;
 
   border-top: 1px solid #ffffff;
 }
@@ -2010,7 +2013,7 @@ input[type="radio"].visually-hidden {
 .header__user-item .search__box,
 .header__user-item .signin,
 .header__user-item .cart,
-/*.feedback,*/
+.feedback,
 .inner--hidden,
 .btn--hidden {
   display: none;
