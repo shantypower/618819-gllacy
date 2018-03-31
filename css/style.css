@@ -369,11 +369,11 @@ input[type="radio"].visually-hidden {
 
 .menu__list {
   position: absolute;
-  top: 40px;
+  top: 37px;
   left: -7px;
   z-index: 10;
-
-  padding: 0px;
+  padding-top: 3px;
+  padding-bottom: 8px;
   min-width: 143px;
 
   background-color: #f8f7f4;
@@ -381,26 +381,23 @@ input[type="radio"].visually-hidden {
   overflow: hidden;
 }
 
-.menu__item {
-  display: block;
-  padding: 8px 20px;
-
-  font-weight: 300;
-  font-size: 14px;
-  line-height: 16px;
-}
-
 .menu__item--underline::after {
   content: "";
   position: absolute;
-  right: 6px;
-  top: 31px;
-  left: 6px;
+  right: 8px;
+  top: 38px;
+  left: 8px;
   height: 1px;
   background-color: rgba(0, 0, 0, 0.2);
 }
 
 .menu__link {
+  display: block;
+  padding: 7px 20px;
+
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 16px;
   color: #323232;
 }
 
@@ -410,21 +407,22 @@ input[type="radio"].visually-hidden {
 
 .menu__item:first-of-type {
   border-radius: 8px 8px 0 0;
+  padding-bottom: 10px;
 }
 
 .menu__item:last-child {
   border-radius: 0 0 8px 8px;
 }
 
-.item--current {
+.menu__link--curent {
   background-color: #d07058;
 }
 
-.menu__item:not(.item--current):hover {
+.menu__link:not(.menu__link--curent):hover {
   background-color: #fbded7;
 }
 
-.menu__item:active {
+.menu__item .menu__link:active {
   background-color: #f6b5a5;
 }
 
@@ -911,7 +909,8 @@ input[type="radio"].visually-hidden {
 }
 
 .catalog__description {
-
+  margin-left: 9px;
+  margin-right: -3px;
   font-size: 16px;
   line-height: 22px;
   font-weight: 500;
