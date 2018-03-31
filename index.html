@@ -179,7 +179,7 @@
             <div class="newsletter__bg">
               <p class="newsletter__text">Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
               <form class="newsletter__form" action="https://echo.htmlacademy.ru" method="post">
-                <label for="e-mail-field" class="visually-hidden">Электронная почта</label><input class="newsletter__input" type="email" name="e-mail" id="e-mail-field" placeholder="Электронная почта" required>
+                <h3 class="visually-hidden">Электронная почта</h3><input class="newsletter__input" type="email" name="e-mail" id="e-mail-field" placeholder="Электронная почта" required>
                 <button class="newsletter__btn btn" type="submit">Отправить</button>
               </form>
             </div>
@@ -190,8 +190,8 @@
 
     <section class="map">
       <h2 class="visually-hidden">Расположение на карте и адрес</h2>
+      <div class="map__inner" id="map__canvas"></div>
       <div class="map__wrapper">
-        <img src="img/map.jpg" width="1200" height="430" alt="Адрес главного офиса и офлайн-магазина: ул. Большая Конюшенная 19/8, Санкт-Петербург">
         <div class="map__adress-block">
           <p class="map__text">Адрес главного офиса и офлайн-магазина:</p>
           <span class="map__text--bold map__adress">ул. Большая Конюшенная 19/8, Санкт-Петербург</span>
@@ -201,17 +201,15 @@
           <a href="#" class="offers__btn btn map__btn">Форма обратной связи</a>
         </div>
       </div>
-      <div class="map__bg" id="map__canvas">
-      </div>
     </section>
 
     <section class="feedback">
       <h2 class="feedback__title">Мы обязательно вам ответим!</h2>
       <!-- Форма обратной связи-->
       <form class="feedback__form" action="https://echo.htmlacademy.ru" method="post">
-        <label class="visually-hidden" for="user-name">Как вас зовут?</label><input class="feedback__field input__name" type="text" name="user-name-field" id="user-name" placeholder="Как вас зовут?" required>
-        <label class="visually-hidden" for="email">Ваша почта для ответа?</label><input class="feedback__field input__email" type="email" name="email-field" id="email" placeholder="Ваша почта для ответа?" required>
-        <label class="visually-hidden" for="letter-field">Напишите что-нибудь</label><textarea class="feedback__text" name="feedback-text" id="letter-field" placeholder="Напишите что-нибудь..." required></textarea>
+        <h3 class="visually-hidden">Как вас зовут?</h3><input class="feedback__field input__name" type="text" name="user-name-field" id="user-name" placeholder="Как вас зовут?" required>
+        <h3 class="visually-hidden">Ваша почта для ответа?</h3><input class="feedback__field input__email" type="email" name="email-field" id="email" placeholder="Ваша почта для ответа?" required>
+        <h3 class="visually-hidden">Напишите что-нибудь</h3><textarea class="feedback__text" name="feedback-text" id="letter-field" placeholder="Напишите что-нибудь..." required></textarea>
         <button class="offers__btn btn" type="submit" name="subscribe">Отправить</button>
       </form>
       <button class="feedback--close" type="button"></button>
@@ -245,7 +243,7 @@
   </footer>
   </div>
 
-  <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;"></script>
   <script src="js/script.js"></script>
 
 </body>
