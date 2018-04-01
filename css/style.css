@@ -508,7 +508,7 @@ input[type="radio"].visually-hidden {
 
 .cart {
   position: absolute;
-  top: 35px;
+  top: 38px;
   right: 0px;
   z-index: 20;
 
@@ -521,10 +521,10 @@ input[type="radio"].visually-hidden {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: start;
+    -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  padding: 16px 12px 20px 16px;
+  padding: 16px 12px 19px 16px;
   width: 512px;
 
   font-size: 13px;
@@ -538,9 +538,14 @@ input[type="radio"].visually-hidden {
 
 .cell {
   padding: 0;
-  padding-top: 10px;
-  padding-bottom: 12px;
+  padding-top: 3px;
+  padding-bottom: 14px;
   vertical-align: center;
+}
+
+
+.cell__check {
+  padding-top: 5px;
 }
 
 .cell:not(.cell__item) {
@@ -548,6 +553,7 @@ input[type="radio"].visually-hidden {
 }
 
 .cell__btn {
+  position: relative;
   padding-right: 12px;
 }
 
@@ -563,15 +569,19 @@ input[type="radio"].visually-hidden {
 }
 
 .cell__total {
-  padding-right: 9px;
+  padding-right: 17px;
 }
 
 .cart__content {
+  margin-bottom: 0px;
+
   width: 100%;
   border-collapse: collapse;
 }
 
 .row:nth-last-of-type(2) .cell {
+  padding-bottom: 20px;
+
   border-bottom: 1px solid #cacac7;
 }
 
@@ -582,6 +592,8 @@ input[type="radio"].visually-hidden {
 }
 
 .row:last-child .cell {
+  padding-top: 13px;
+
   font-size: 15px;
   line-height: 18px;
   font-weight: bold;
@@ -1428,6 +1440,17 @@ input[type="radio"].visually-hidden {
   cursor: pointer;
 }
 
+.del__btn {
+  width: 11px;
+  height: 11px;
+
+  font-size: 0;
+  border: 0;
+  background-color: transparent;
+
+  cursor: pointer;
+}
+
 .feedback--close::before,
 .feedback--close::after {
   content: "";
@@ -1439,13 +1462,15 @@ input[type="radio"].visually-hidden {
   background-color: #323232;
 }
 
-.feedback--close::before {
+.feedback--close::before,
+.del__btn::before {
   -webkit-transform: rotate(45deg);
       -ms-transform: rotate(45deg);
           transform: rotate(45deg);
 }
 
-.feedback--close::after {
+.feedback--close::after,
+.del__btn::after {
   -webkit-transform: rotate(-45deg);
       -ms-transform: rotate(-45deg);
           transform: rotate(-45deg);
