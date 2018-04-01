@@ -1752,8 +1752,8 @@ input[type="radio"].visually-hidden {
   pointer-events: none;
 }
 
-.filters__sorting:hover,
-.filters__sorting:focus {
+.filters__group:hover .filters__sorting,
+.filters__group:focus .filters__sorting {
   color: #323232;
 }
 
