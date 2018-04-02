@@ -1068,7 +1068,7 @@ input[type="radio"].visually-hidden {
   padding: 5px;
   width: 550px;
 
-  background: url("../img/post-bg.jpg") no-repeat center;
+  background: url("../img/post-bg.jpg") repeat center;
   background-color: #f8f7f4;
 }
 
@@ -1241,7 +1241,7 @@ input[type="radio"].visually-hidden {
 }
 
 .map__adress-block {
-  z-index: 5;
+  z-index: 1;
 
   position: absolute;
   top: 63px;
@@ -1362,7 +1362,7 @@ input[type="radio"].visually-hidden {
   position: fixed;
   top: 340px;
   left: 50%;
-  z-index: 15;
+  z-index: 2;
 
   width: 427px;
   height: 399px;
@@ -1373,6 +1373,18 @@ input[type="radio"].visually-hidden {
   border-radius: 10px;
   -webkit-box-shadow: 0 30px 50px rgba(0, 0, 0, 0.7);
           box-shadow: 0 30px 50px rgba(0, 0, 0, 0.7);
+}
+
+.feedback__overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+  background-color: rgba(50, 50, 50, 0.3);
+  z-index: 1;
+  display: none;
 }
 
 .feedback__title {
@@ -1898,8 +1910,6 @@ input[type="radio"].visually-hidden {
 }
 
 .footer__social-list {
-  position: relative;
-
   display: -webkit-box;
 
   display: -ms-flexbox;
@@ -1908,7 +1918,11 @@ input[type="radio"].visually-hidden {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  min-width: 187px;
+  min-width: 179px;
+}
+
+.footer__social-item {
+  position: relative;
 }
 
 .social-btn {
@@ -1923,11 +1937,12 @@ input[type="radio"].visually-hidden {
 .footer__inst::before,
 .footer__fb::before,
 .footer__vk::before,
-.social-btn::before {
+.footer__social-item::before {
   display: block;
   content: "";
   position: absolute;
   top: 6px;
+  left: 3px;
 
   width: 32px;
   height: 32px;
@@ -1941,16 +1956,14 @@ input[type="radio"].visually-hidden {
 }
 
 .footer__tw::before {
-  left: 0px;
-
   background: url("../img/twitter.svg") no-repeat center;
 }
 
-.social-btn:hover::before {
+.footer__social-item:hover::before {
   border: 2px solid rgba(255, 255, 255, 0.7);
   opacity: 1;
 }
-.social-btn:active::before {
+.footer__social-item:active::before {
   border: 2px solid rgba(255, 255, 255, 0.7);
   -webkit-box-shadow: inset 0px 2px 0px 1px #888888;
           box-shadow: inset 0px 2px 0px 1px #888888;
@@ -1958,20 +1971,14 @@ input[type="radio"].visually-hidden {
 }
 
 .footer__inst::before {
-  left: 50px;
-
   background: url("../img/instagram.svg") no-repeat center;
 }
 
 .footer__fb::before {
-  left: 100px;
-
   background: url("../img/fb.svg") no-repeat center;
 }
 
 .footer__vk::before {
-  left: 150px;
-
   background: url("../img/vk.svg") no-repeat center;
 }
 
@@ -1982,6 +1989,7 @@ input[type="radio"].visually-hidden {
   -ms-flex-item-align: end;
       align-self: flex-end;
   margin-bottom: 4px;
+  margin-left: 8px;
 }
 
 .footer__menu-list {
@@ -2062,4 +2070,111 @@ input[type="radio"].visually-hidden {
 
 .modal-show {
   display: block;
+
+  -webkit-animation: bounce 0.6s;
+
+          animation: bounce 0.6s;
+}
+
+.overlay-show {
+  display: block;
+}
+
+.modal-error {
+  -webkit-animation: shake 0.6s;
+          animation: shake 0.6s;
+}
+
+@-webkit-keyframes bounce {
+  0% {
+    -webkit-transform: translateY(-2000px);
+            transform: translateY(-2000px);
+  }
+
+  70% {
+    -webkit-transform: translateY(30px);
+            transform: translateY(30px);
+  }
+
+  90% {
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+  }
+
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes bounce {
+  0% {
+    -webkit-transform: translateY(-2000px);
+            transform: translateY(-2000px);
+  }
+
+  70% {
+    -webkit-transform: translateY(30px);
+            transform: translateY(30px);
+  }
+
+  90% {
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+  }
+
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@-webkit-keyframes shake {
+  0%,
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    -webkit-transform: translateX(-10px);
+            transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    -webkit-transform: translateX(10px);
+            transform: translateX(10px);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    -webkit-transform: translateX(-10px);
+            transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    -webkit-transform: translateX(10px);
+            transform: translateX(10px);
+  }
 }
