@@ -1,19 +1,41 @@
-function initialize() {
-  var mapOptions = {
-    zoom: 16,
-    center: new google.maps.LatLng(59.938143, 30.327466)
-  }
-  var map = new google.maps.Map(document.getElementById("map__canvas"),
-                                mapOptions);
-  var image = "img/pin.svg";
-  var myLatLng = new google.maps.LatLng(59.938625, 30.322938);
-  var beachMarker = new google.maps.Marker({
-    position: myLatLng,
-    map: map,
-    icon: image
+
+var myMap = document.getElementById("map__canvas");
+
+if (myMap) {
+
+  ymaps.ready(function () {
+    myMap = new ymaps.Map('map__canvas', {
+      center: [59.938655, 30.323143],
+      zoom: 18
+    }, {
+        searchControlProvider: 'yandex#search'
+      }),
+
+      // Создаём макет содержимого.
+      MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+        '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
+      ),
+
+      myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+        hintContent: 'ул. Большая Конюшенная, 19/8',
+        balloonContent: 'ул. Большая Конюшенная, 19/8'
+      }, {
+          // Опции.
+          // Необходимо указать данный тип макета.
+          iconLayout: 'default#image',
+          // Своё изображение иконки метки.
+          iconImageHref: 'img/pin.svg',
+          // Размеры метки.
+          iconImageSize: [80, 140],
+          // Смещение левого верхнего угла иконки относительно
+          // её "ножки" (точки привязки).
+          iconImageOffset: [-40, -140]
+        }),
+
+    myMap.geoObjects
+      .add(myPlacemark)
   });
 }
-google.maps.event.addDomListener(window, "load", initialize);
 
 
   var link = document.querySelector(".map__btn");
@@ -27,7 +49,7 @@ google.maps.event.addDomListener(window, "load", initialize);
 
   var isStorageSupport = true;
   var storage = "";
-  
+
   try {
     storage = localStorage.getItem("login");
   } catch (err) {
